@@ -1,3 +1,7 @@
+# Worst-case performance of O(log n)
+# Best-case performance of 0(1)
+
+
 def binary_search(list, item):
     low = 0
     high = len(list)-1

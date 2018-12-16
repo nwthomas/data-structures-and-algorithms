@@ -1,3 +1,6 @@
+// Worst-case performance of O(log n)
+// Best-case performance of 0(1)
+
 function binarySearch(array, item) {
   let low = 0;
   let high = array.length - 1;
