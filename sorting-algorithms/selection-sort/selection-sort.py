@@ -8,7 +8,7 @@ def find_smallest(arr):
     for i in range(1, len(arr)):
         if arr[i] < smallest:
             smallest = arr[i]
-            smallest_index = 1
+            smallest_index = i
     return smallest_index
 
 
@@ -21,4 +21,5 @@ def selection_sort(arr):  # Sorts an array
     return new_arr
 
 
-print(selection_sort([5, 3, 6, 2, 10, 1]))
+# Output of [1, 2, 3, 4, 5, 6, 9, 10]
+print(selection_sort([5, 3, 6, 2, 10, 1, 9, 4]))
