@@ -12,7 +12,9 @@ function quicksort(array) {
 
     // Sub-array of all the elements great than the pivot
     let greater = array.filter(num => num > pivot);
-    return quicksort(less) + pivot + quicksort(greater);
+    return quicksort(less)
+      .concat(pivot)
+      .concat(quicksort(greater));
   }
 }
 
