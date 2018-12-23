@@ -1,6 +1,6 @@
 # Algorithm Examples
 
-This repository is a collection of search, sort, and other awesome algorithms. Although the only languages listed are currently Python and JavaScript, it will be updated in the future with new languages as I learn.
+This repository is a collection of search, sort, and other awesome algorithms. Although the only languages listed are currently Python and JavaScript, it will be updated in the future with new languages (and also algorithms) as I learn.
 
 If these files are interesing or useful to you, please feel free to fork, star, or clone this repository.
 
