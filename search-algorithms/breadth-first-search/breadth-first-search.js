@@ -24,5 +24,6 @@ let deep = {
   9: { 10: { 11: { 12: { 13: { 14: { 15: 16 } } } } } }
 };
 
-console.log(breadthFirstSearch(deep, 16)); // Will return true.
-console.log(breadthFirstSearch(deep, "c")); // Will return true.
+console.log(breadthFirstSearch(deep, 16)); // Will return true
+console.log(breadthFirstSearch(deep, "c")); // Will return true
+console.log(breadthFirstSearch(deep, "dude")); // Will return false
