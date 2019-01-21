@@ -1,2 +1,3 @@
 .vscode
-.breadth-first-search.py
+algorithms/search-algorithms/dijkstras-algorithm/
+# Dijkstra's work in progress
