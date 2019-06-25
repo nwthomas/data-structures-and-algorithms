@@ -13,7 +13,7 @@ This repository is a collection of data structures and assorted algorithms. Alth
     - [Binary Search](algorithms/search-algorithms/binary-search) - Definition on [Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm)
     - [Breadth-First Search](algorithms/search-algorithms/breadth-first-search) - Definition on [Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search)
   - [Sort Algorithms](algorithms/sort-algorithms)
-    - [Quicksort](algorithms/sort-algorithms/quicksort) - Definition on [Wikipedia](https://en.wikipedia.org/wiki/Quicksort)
+    - [Quick Sort](algorithms/sort-algorithms/quick-sort) - Definition on [Wikipedia](https://en.wikipedia.org/wiki/Quicksort)
     - [Selection Sort](algorithms/sort-algorithms/selection-sort) - Definition on [Wikipedia](https://en.wikipedia.org/wiki/Selection_sort)
 - Data Structures (COMING SOON)
 
