@@ -1,0 +1,22 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "A repository of data structures and algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwthomas/algorithm-examples.git"
+  },
+  "author": "Nathan Thomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nwthomas/algorithm-examples/issues"
+  },
+  "homepage": "https://github.com/nwthomas/algorithm-examples#readme",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}

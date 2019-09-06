@@ -4,17 +4,18 @@
 
 ## Purpose
 
-This repository is a collection of data structures and assorted algorithms. Although the only languages currently used are Python and JavaScript, it will be updated in the future with new languages and new knowledge.
+This repository is my personal collection of data structures and assorted algorithms written in [Python](https://www.python.org/) and [JavaScript](https://www.ecma-international.org/). I will be updating this repository in the future to include interpretations of the algorithms in other languages.
 
 ## Table of Contents
 
 - [Algorithms](algorithms/)
   - [Search Algorithms](algorithms/search-algorithms)
-    - [Binary Search](algorithms/search-algorithms/binary-search) - Definition on [Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm)
-    - [Breadth-First Search](algorithms/search-algorithms/breadth-first-search) - Definition on [Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search)
+    - [Binary Search](algorithms/search-algorithms/binary-search)
+    - [Breadth-First Search](algorithms/search-algorithms/breadth-first-search)
   - [Sort Algorithms](algorithms/sort-algorithms)
-    - [Quick Sort](algorithms/sort-algorithms/quick-sort) - Definition on [Wikipedia](https://en.wikipedia.org/wiki/Quicksort)
-    - [Selection Sort](algorithms/sort-algorithms/selection-sort) - Definition on [Wikipedia](https://en.wikipedia.org/wiki/Selection_sort)
+    - [Insertion Sort](algorithms/sort-algorithms/insertion-sort)
+    - [Quick Sort](algorithms/sort-algorithms/quick-sort)
+    - [Selection Sort](algorithms/sort-algorithms/selection-sort)
 - Data Structures (COMING SOON)
 
 ## What is an Algorithm?
@@ -32,5 +33,6 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/Algorithm), "an algorithm
 ## Acknowledgments
 
 - Thanks to Aditya Bhargava, the author of [Grokking Algorithms](https://smile.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230/ref=sr_1_2?ie=UTF8&qid=1544921791&sr=8-2&keywords=grokking+algorithm). You inspired me to learn this stuff and start documenting it for ease of later use.
-- Huge thanks to [Byron Homes](https://github.com/byronholmes2018) for getting me excited about data structures and algorithms. You're awesome.
-- Thanks to [Frank Faustino](https://github.com/frankfaustino) for inspiring me to create, build, and make my own data structures and algorithms repository.
+- Thanks [Beej Jorgenson](https://github.com/beejjorgensen) for being a _boss_ of a computer science instructor at [Lambda School](https://lambdaschool.com/). You make things simple, easy, and understandable. That's the highest praise I could ever give someone teaching a complicated topic like CS.
+- Huge thanks to [Byron Homes](https://github.com/byronholmes2018) for getting me excited about data structures and algorithms. You're awesome and a genius.
+- Thanks to [Frank Faustino](https://github.com/frankfaustino) for inspiring me to create, build, and make my own data structures and algorithms repository. Your own journey has inspired my own.
