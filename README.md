@@ -20,11 +20,11 @@ This repository is my personal collection of data structures and assorted algori
 
 ## What is an Algorithm?
 
-According to [Wikipedia](https://en.wikipedia.org/wiki/Algorithm), "an algorithm is an unambiguous specification of how to solve a class of problems. Algorithms can perform calculation, data processing, and automated reasoning tasks." In this respect, algorithms govern much of what computer scientists, data scientists, and machine learning scientists do, as the algorithms built define and interpret the data needing to be parsed or calculated. In this repository, the algorithms will consist of those commonly used and studied in the field of computer science.
+An "[algorithm](https://en.wikipedia.org/wiki/Algorithm) is an unambiguous specification of how to solve a class of problems. Algorithms can perform calculation, data processing, and automated reasoning tasks." In this respect, algorithms govern much of what computer scientists, data scientists, and machine learning scientists do, as the algorithms built define and interpret the data needing to be parsed or calculated. In this repository, the algorithms will consist of those commonly used and studied in the field of computer science.
 
 ## What is a Data Structure?
 
-[Wikipedia](https://en.wikipedia.org/wiki/Data_structure) states that "a data structure data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationship among them, and the functions or operations that can be applied to the data." In this repository, the data structures will consist of those most common to the field of computer science (i.e. hash tables, linked lists, etc.).
+[Data structures](https://en.wikipedia.org/wiki/Data_structure) allow "data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationship among them, and the functions or operations that can be applied to the data." In this repository, the data structures will consist of those most common to the field of computer science (i.e. hash tables, linked lists, etc.).
 
 ## Author
 
