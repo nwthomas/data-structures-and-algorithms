@@ -13,9 +13,10 @@ This repository is my personal collection of data structures and assorted algori
     - [Binary Search](algorithms/search-algorithms/binary-search)
     - [Breadth-First Search](algorithms/search-algorithms/breadth-first-search)
   - [Sort Algorithms](algorithms/sort-algorithms)
-    - [Insertion Sort](algorithms/sort-algorithms/insertion-sort)
-    - [Quick Sort](algorithms/sort-algorithms/quick-sort)
-    - [Selection Sort](algorithms/sort-algorithms/selection-sort)
+    - [(COMPARISON) Bubble Sort](algorithms/sort-algorithms/bubble-sort)
+    - [(COMPARISON) Insertion Sort](algorithms/sort-algorithms/insertion-sort)
+    - [(COMPARISON) Quick Sort](algorithms/sort-algorithms/quick-sort)
+    - [(COMPARISON) Selection Sort](algorithms/sort-algorithms/selection-sort)
 - Data Structures (COMING SOON)
 
 ## What is an Algorithm?

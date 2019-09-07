@@ -1,7 +1,6 @@
 .vscode
 algorithms/search-algorithms/dijkstras-algorithm/
 # Dijkstra's work in progress
-/algorithms/sort-algorithms/bubble-sort# Logs
 logs
 *.log
 npm-debug.log*
