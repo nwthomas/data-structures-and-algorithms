@@ -3,9 +3,9 @@
 
 
 def bubble_sort(arr):
-    # Boolean flag to check if current iteration has swapped anything
-    swapped = False
     for i in range(0, len(arr)):
+        # Boolean flag to check if current iteration has swapped anything
+        swapped = False
         # Loops over every time every time
         for j in range(0, len(arr) - 1):
             # Swap elements if j is lesser than j + 1
@@ -17,9 +17,6 @@ def bubble_sort(arr):
         # End all loops if not swaps have happend on current iteration
         if not swapped:
             break
-        # Else reset boolean flag
-        else:
-            swapped = False
     return arr
 
 
