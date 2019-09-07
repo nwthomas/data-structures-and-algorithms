@@ -1,26 +1,14 @@
 // Worst-case performance of O(n^2) for comparisons and O(n) for swaps
 // Best-case performance of 0(n^2) for comparisons and O(n) for swaps
 
-function findSmallest(arr) {
-  let smallest = arr[0];
-  let smallestIndex = 0;
+function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < smallest) {
-      smallest = arr[i];
-      smallestIndex = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] > arr[j]) [arr[i], arr[j]] = [arr[j], arr[i]];
     }
   }
-  return smallestIndex;
+  return arr;
 }
 
-function selectionSort(arr) {
-  const dupArr = arr.slice();
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    let smallest = findSmallest(dupArr);
-    newArr.push(dupArr.splice([smallest], 1));
-  }
-  return newArr;
-}
-
+// Expected return of [1, 2, 3, 44, 5, 6, 9, 10]
 console.log(selectionSort([5, 3, 6, 2, 10, 1, 9, 4]));
