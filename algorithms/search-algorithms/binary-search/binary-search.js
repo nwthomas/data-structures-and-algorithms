@@ -16,7 +16,7 @@ function binarySearch(array, item) {
       low = mid + 1;
     }
   }
-  return "None";
+  return -1;
 }
 
 const myList = [1, 3, 5, 7, 9];
