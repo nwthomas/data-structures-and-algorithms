@@ -2,6 +2,8 @@
 
 Merge sort is based on the principle that an array or list of a single item is sorted. Because of this, merge sort will recursively break down a problem into arrays/lists of single items and then progressively merge the items together in order as the call stack unwinds.
 
+Merge Sort is one of the most efficient sorting algorithms and is commonly used under the hood for various languages' default `sort()` methods.
+
 ## TABLE OF CONTENTS
 
 - [Implementations](#implementations)
