@@ -1,5 +1,3 @@
-// Worst case performance of O(n^2)
-
 function insertionSort(arr) {
   // Copies array to avoid side effects
   const elements = [...arr];

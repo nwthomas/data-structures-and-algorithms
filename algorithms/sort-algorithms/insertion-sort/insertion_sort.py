@@ -1,6 +1,3 @@
-# Worst case performance of O(n^2)
-
-
 def insertion_sort(list):
     elements = [*list]  # Makes a new copy of the list
     # Loop through all the elements
