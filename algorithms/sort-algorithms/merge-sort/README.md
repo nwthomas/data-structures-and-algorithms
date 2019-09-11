@@ -1,13 +1,18 @@
-# MERGE SORT
+# MERGE SORT ✌️
 
 Merge sort is based on the principle that an array or list of a single item is sorted. Because of this, merge sort will recursively break down a problem into arrays/lists of single items and then progressively merge the items together in order as the call stack unwinds.
 
 ## TABLE OF CONTENTS
 
+- [Implementations](#implementations)
 - [Type](#type)
 - [Algorithm Description](#algorithm-description)
 - [Space and Time Complexity](#space-and-time-complexity)
-- [Implementations](#implementations)
+
+## IMPLEMENTATIONS
+
+- [JavaScript](mergeSort.js)
+- [Python](merge_sort.py)
 
 ## TYPE
 
@@ -31,8 +36,3 @@ It is recommended to use:
 In all cases, regardless of how sorted the original data set might be, we have a time complexity of `O(n log(n))`. This is one of the better running times out there for a sorting algorithm, making Merge Sort a great algorithm to know off-hand.
 
 The space complexity will depend on implementation. It will either vary between `O(1)` (for an in-place implementation) to `O(n)` (for when you split the array/list down to single arrays/lists for each item).
-
-## IMPLEMENTATIONS
-
-- [JavaScript](mergeSort.js)
-- [Python](merge_sort.py)
