@@ -31,12 +31,11 @@ Big O notation helps us evaluate decisions between multiple implementations of t
 
 It allows us to talk formally about how the runtime of an algorithm grows as the inputs grow. We don't care about the details, only the broad trends. When we talk about Big O, we're typically talking about the worst case scenario runtime for the algorithm.
 
-For instance, here's a function called `addUpTo()` with a runtime of O(1):
+For instance, here's a function called `addUpTo()` with a runtime of `O(1)`:
 
-```js
-function addUpTo(num) {
-  return (num * (num + 1)) / 2;
-}
+```py
+def add_up_to(num):
+  return ((num * (num + 1)) / 2)
 ```
 
 This is because the num is a constant. No matter how big the number, it will always take the same amount of complexity to run the function.
