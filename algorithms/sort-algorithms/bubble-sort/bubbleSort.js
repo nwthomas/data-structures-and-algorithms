@@ -1,6 +1,3 @@
-// Worst case performance of O(n^2) for comparisons and O(n^2) for swaps
-// Best case performance of O(n^2) for comparisons and O(1) for swaps
-
 function bubbleSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     // Boolean flag to check if current iteration has swapped anything

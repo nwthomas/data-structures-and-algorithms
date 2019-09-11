@@ -1,7 +1,3 @@
-# Worst case performance of O(n^2) for comparisons and O(n^2) for swaps
-# Best case performance of O(n^2) for comparisons and O(1) for swaps
-
-
 def bubble_sort(arr):
     for i in range(0, len(arr)):
         # Boolean flag to check if current iteration has swapped anything
@@ -18,7 +14,3 @@ def bubble_sort(arr):
         if not swapped:
             break
     return arr
-
-
-# Expected return of [1, 2, 3, 4, 4, 4, 5, 6, 7, 9]
-print(bubble_sort([2, 4, 5, 7, 1, 4, 3, 6, 9, 4]))
