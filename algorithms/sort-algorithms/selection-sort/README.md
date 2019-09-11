@@ -1,4 +1,4 @@
-# QUICK SORT 🦁️
+# SELECTION SORT 🦁️
 
 Selection Sort relies on the idea of comparing every single item in the array, finding the smallest selection for the current _index_ in the outer loops, and then swapping the two positions. You do not need to compare/look at the last _index_ of the array/list _n_ since that will be, by default, sorted.
 

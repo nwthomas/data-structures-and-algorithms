@@ -1,14 +1,15 @@
-# Worst-case performance of O(n^2) for comparisons and O(n) for swaps
-# Best-case performance of 0(n^2) for comparisons and O(n) for swaps
-
-
-def selection_sort(arr):
-    for i in range(0, len(arr) - 1):
-        for j in range(i + 1, len(arr)):
-            if arr[i] > arr[j]:
-                arr[i], arr[j] = arr[j], arr[i]
-    return arr
-
-
-# Expected return of [1, 2, 3, 4, 5, 6, 9, 10]
-print(selection_sort([5, 3, 6, 2, 10, 1, 9, 4]))
+def selection_sort(l):
+    # Outer loop for iterating until second to last index in list
+    for i in range(len(l)):
+        # Track least index position
+        least = i
+        # Inner loop to handle checking every item for lower number
+        for j in range(i + 1, len(l)):
+            # Set least to lowest index if found
+            if l[j] < l[least]:
+                least = j
+        # Swap least index with current index if found
+        if least is not i:
+            l[i], l[least] = l[least], l[i]
+    # Return sorted list
+    return l
