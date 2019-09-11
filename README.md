@@ -2,12 +2,15 @@
 <h4 align="center">A collection of data structures and algorithms implemented in Python and JavaScript.</h4>
 <br>
 
-## Purpose
+## PURPOSE
 
 This repository is my personal collection of data structures and assorted algorithms written in [Python](https://www.python.org/) and [JavaScript](https://www.ecma-international.org/). I will be updating this repository in the future to include interpretations of the algorithms in other languages.
 
-## Table of Contents
+## TABLE OF CONTENTS
 
+- [Big O Complexity](#big-o-complexity)
+- [What is an Algorithm?](#what-is-an-algorithm)
+- [What is a Data Structure?](#what-is-a-data-structure)
 - [Algorithms](algorithms/)
   - [Search Algorithms](algorithms/search-algorithms)
     - [Binary Search](algorithms/search-algorithms/binary-search)
@@ -19,12 +22,41 @@ This repository is my personal collection of data structures and assorted algori
     - [Quick Sort](algorithms/sort-algorithms/quick-sort)
     - [Selection Sort](algorithms/sort-algorithms/selection-sort)
 - Data Structures (COMING SOON)
+- [Author](#author)
+- [Acknowledgements](#acknowledgements)
 
-## What is an Algorithm?
+## BIG O COMPLEXITY
+
+Big O notation helps us evaluate decisions between multiple implementations of the same function. It helps us decide, _"Which way is best?"_
+
+It allows us to talk formally about how the runtime of an algorithm grows as the inputs grow. We don't care about the details, only the broad trends. When we talk about Big O, we're typically talking about the worst case scenario runtime for the algorithm.
+
+For instance, here's a function called `addUpTo()` with a runtime of O(1):
+
+```js
+function addUpTo(num) {
+  return (num * (num + 1)) / 2;
+}
+```
+
+This is because the num is a constant. No matter how big the number, it will always take the same amount of complexity to run the function.
+
+There are two variations of `Big O`:
+
+1. Time Complexity
+2. Space Complexity
+
+`Time Complexity` is used to measure the efficienty of operations in the code, while `Space Complexity` is used to indicate the amount of memory efficiency the code has.
+
+Here's a graph that compares various common `Big O` curves:
+
+<div align="center"><img alt="Big O Notation chart" src="./assets/big-o-complexity-chart.png"/></div>
+
+## WHAT IS AN ALGORITHM?
 
 An "[algorithm](https://en.wikipedia.org/wiki/Algorithm) is an unambiguous specification of how to solve a class of problems. Algorithms can perform calculation, data processing, and automated reasoning tasks." In this respect, algorithms govern much of what computer scientists, data scientists, and machine learning scientists do, as the algorithms built define and interpret the data needing to be parsed or calculated.
 
-## What is a Data Structure?
+## WHAT IS A DATA STRUCTURE?
 
 A [data structure](https://en.wikipedia.org/wiki/Data_structure) "allows data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationship among them, and the functions or operations that can be applied to the data."
 
@@ -32,7 +64,7 @@ A [data structure](https://en.wikipedia.org/wiki/Data_structure) "allows data or
 
 - [**Nathan Thomas**](https://github.com/nwthomas)
 
-## Acknowledgments
+## ACKNOWLEDGEMENTS
 
 - Thanks [Beej Jorgenson](https://github.com/beejjorgensen) for being a _boss_ of a computer science instructor at [Lambda School](https://lambdaschool.com/). You make things simple, easy, and understandable. That's the highest praise I could ever give someone teaching a complicated topic like CS.
 - Thank you to [Brad Fukumoto](https://github.com/br80). You're so knowledgeable, but you're also super approachable as a teacher; your passion for teaching shines through. Also, you have _boss_-level hobbies.
