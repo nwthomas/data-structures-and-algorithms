@@ -17,6 +17,7 @@ This repository is my personal collection of data structures and assorted algori
     - [Breadth-First Search](algorithms/search-algorithms/breadth-first-search)
   - [Sort Algorithms](algorithms/sort-algorithms)
     - [Bubble Sort](algorithms/sort-algorithms/bubble-sort)
+    - [Counting Sort](algorithms/sort-algorithms/counting-sort)
     - [Insertion Sort](algorithms/sort-algorithms/insertion-sort)
     - [Merge Sort](algorithms/sort-algorithms/merge-sort)
     - [Quick Sort](algorithms/sort-algorithms/quick-sort)
