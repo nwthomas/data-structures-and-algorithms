@@ -31,7 +31,7 @@ class Node:
         inserts it gefore this Node.
         """
         current_prev = self.prev
-        self.prev = Node(value, self, current_prev)
+        self.prev = Node(value, current_prev, self)
         if current_prev is not None:
             current_prev.next = self.prev
 
