@@ -24,8 +24,8 @@ This repository is my personal collection of data structures and assorted algori
     - [Selection Sort](algorithms/sort-algorithms/selection-sort)
 - [Data Structures](data-structures)
   - [Linked List](data-structures/linked-list)
-    - [Singly-Linked List](data-structures/linked-lists/singly-linked-list)
-    - [Doubly-Linked List](data-structures/linked-lists/doubly-linked-list)
+    - [Singly-Linked List](data-structures/linked-list/singly-linked-list)
+    - [Doubly-Linked List](data-structures/linked-list/doubly-linked-list)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 
