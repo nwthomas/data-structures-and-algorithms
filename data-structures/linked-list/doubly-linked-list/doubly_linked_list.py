@@ -135,7 +135,7 @@ class DoublyLinkedList:
             self.remove_from_tail()
         else:
             node.delete()
-            self.length += 1
+            self.length -= 1
         self.add_to_head(value)
 
     def move_to_end(self, node):
@@ -150,7 +150,7 @@ class DoublyLinkedList:
             self.remove_from_head()
         else:
             node.delete()
-            self.length += 1
+            self.length -= 1
         self.add_to_tail(value)
 
     def delete(self, node):

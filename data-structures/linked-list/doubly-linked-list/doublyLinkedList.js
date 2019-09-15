@@ -50,7 +50,7 @@ class DoublyLinkedList {
     return self.length;
   }
 
-  addTohead(value) {
+  addToHead(value) {
     /**
      * Instantiates a new Node and inserts it as the new head
      * of the list.
@@ -65,6 +65,16 @@ class DoublyLinkedList {
       this.head.prev = newNode;
       this.head = newNode;
     }
+  }
+
+  removeFromHead() {
+    /**
+     * Removes the current head Node and sets the next Node
+     * as the head. It returns the removed Node value.
+     */
+    let nodeValue = this.head.value;
+    this.delete(this.head);
+    return nodeValue;
   }
 
   addToTail(value) {
@@ -82,6 +92,48 @@ class DoublyLinkedList {
       this.tail.next = newNode;
       this.tail = newNode;
     }
+  }
+
+  removeFromTail() {
+    /**
+     * Removes the current tail Node and sets the previous Node
+     * as the tail. It returns the removed Node value.
+     */
+    let nodeValue = this.tail.value;
+    this.delete(this.tail);
+    return nodeValue;
+  }
+
+  moveToFront(node) {
+    /**
+     * Removes the input Node from the current spot in the
+     * list and inserts it as the new head Node of the list.
+     */
+    if (node === this.head) return null;
+    let value = node.value;
+    if (node === this.tail) {
+      this.removeFromTail();
+    } else {
+      node.delete();
+      this.length--;
+    }
+    this.addToHead(value);
+  }
+
+  moveToEnd(node) {
+    /**
+     * Removes the input Node from the current spot in the
+     * list and inserts it as the new tail Node of the list.
+     */
+    if (node == this.tail) return null;
+    let value = node.value;
+    if (node === this.head) {
+      this.removeFromHead();
+    } else {
+      node.delete();
+      this.length--;
+    }
+    this.addToTail(value);
   }
 }
 
