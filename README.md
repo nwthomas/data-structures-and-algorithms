@@ -22,7 +22,10 @@ This repository is my personal collection of data structures and assorted algori
     - [Merge Sort](algorithms/sort-algorithms/merge-sort)
     - [Quick Sort](algorithms/sort-algorithms/quick-sort)
     - [Selection Sort](algorithms/sort-algorithms/selection-sort)
-- Data Structures (COMING SOON)
+- [Data Structures](data-structures)
+  - [Linked List](data-structures/linked-list)
+    - [Singly-Linked List](data-structures/linked-lists/singly-linked-list)
+    - [Doubly-Linked List](data-structures/linked-lists/doubly-linked-list)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 
