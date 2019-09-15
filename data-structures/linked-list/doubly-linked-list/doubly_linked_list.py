@@ -48,7 +48,7 @@ class Node:
 
     def __str__(self):
         """
-        Returns a string version of the node in a readable
+        Returns a string version of the Node in a readable
         format.
         """
         return f"Value: {self.value}\nPrevious Node: {self.prev}\nNext Node: {self.next}"
@@ -126,9 +126,24 @@ class DoublyLinkedList:
     def move_to_front(self, node):
         """
         Removes the input Node from the current spot in the
-        list and inserts it as the new tail Node of the list.
+        list and inserts it as the new head Node of the list.
         """
         if node is self.head:
+            return
+        value = node.value
+        if node is self.tail:
+            self.remove_from_tail()
+        else:
+            node.delete()
+            self.length += 1
+        self.add_to_head(value)
+
+    def move_to_end(self, node):
+        """
+        Removes the input Node from its current spot in the
+        list and inserts it as the new tail Node of the list.
+        """
+        if node is self.tail:
             return
         value = node.value
         if node is self.head:
@@ -137,3 +152,57 @@ class DoublyLinkedList:
             node.delete()
             self.length += 1
         self.add_to_tail(value)
+
+    def delete(self, node):
+        """
+        Removes a Node from the list and handles cases where
+        the Node was the head or the tail
+        """
+        if self.head is self.tail:
+            self.head = None
+            self.tail = None
+        elif self.head is node:
+            self.head = self.head.next
+            node.delete()
+        elif self.tail is node:
+            self.tail = self.tail.prev
+            node.delete()
+        else:
+            node.delete()
+        self.length -= 1
+
+    def get_max(self):
+        """
+        Returns the highest value currently in the list
+        """
+        if self.length is 0:
+            return None
+        else:
+            highest = self.head.value
+            current_node = self.head
+            while current_node.next is not None:
+                current_node = current_node.next
+                if highest < current_node.value:
+                    highest = current_node.value
+            return highest
+
+    def __getattr__(self):
+        """
+        Returns None for any class inquiry on variables
+        that don't exist.
+        """
+        return None
+
+    def __str__(self):
+        """
+        Returns a string version of the DoublyLinkedList in
+        a readable format.
+        """
+        return f"Value: {self.value}\nHead Node: {self.head}\nTail Node: {self.tail}"
+
+    def __repr__(self):
+        """
+        Returns a representation of this DoublyLinkedList in
+        code to recreate it.
+        """
+        return f"DoublyLinkedList({repr(self.value)}, {repr(self.head)}, {repr(self.tail)})"
