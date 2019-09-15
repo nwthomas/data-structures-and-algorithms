@@ -1,4 +1,4 @@
-# SORT ALGORITHMS
+# SORT ALGORITHMS 🌵
 
 Sorting algorithms are typically used to find data in a storage structure.
 
