@@ -36,6 +36,55 @@ class Node {
   }
 }
 
+class DoublyLinkedList {
+  constructor(node = null) {
+    this.head = node;
+    this.tail = node;
+    this.length = node ? 1 : 0;
+  }
+
+  length() {
+    /**
+     * Returns the length of the current list
+     */
+    return self.length;
+  }
+
+  addTohead(value) {
+    /**
+     * Instantiates a new Node and inserts it as the new head
+     * of the list.
+     */
+    let newNode = new Node(value);
+    this.length++;
+    if (!this.head && !this.tail) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head.prev = newNode;
+      this.head = newNode;
+    }
+  }
+
+  addToTail(value) {
+    /**
+     * Instantiates a new Node and inserts it as the new tail
+     * of the list.
+     */
+    let newNode = new Node(value);
+    this.length++;
+    if (!this.head && !this.tail) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.prev = this.tail;
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+  }
+}
+
 const node = new Node(1);
 node.insertBefore(5);
 console.log(node);
