@@ -1,6 +1,8 @@
 """
+The DoublyLinkedList class is used to instantiate a new list.
+
 The Node class is used to instantiate various Nodes along
-the Doubly-Linked List.
+the DoublyLinkedList.
 
 Each Node has a reference to the Node before it (if it
 exists) and the Node after it (if it exists).
@@ -73,8 +75,8 @@ class DoublyLinkedList:
 
     def add_to_head(self, value):
         """
-        Creates a new Node and inserts it as the new head
-        of the list.
+        Instantiates a new Node and inserts it as the new
+        head of the list.
         """
         new_node = Node(value)
         self.length += 1
@@ -95,3 +97,43 @@ class DoublyLinkedList:
         node_value = self.head.value
         self.delete(self.head)
         return node_value
+
+    def add_to_tail(self, value):
+        """
+        Instantiates a new Node and inserts it as the new
+        tail of the list.
+        """
+        new_node = Node(value)
+        self.length += 1
+        if not self.head and not self.tail:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            new_node.prev = self.tail
+            self.tail.next = new_node
+            self.tail = new_node
+
+    def remove_from_tail(self):
+        """
+        Removes the current tail Node and sets the previous
+        Node as the tail. It returns the removed Node
+        value.
+        """
+        node_value = self.tail
+        self.delete(self.tail)
+        return node_value
+
+    def move_to_front(self, node):
+        """
+        Removes the input Node from the current spot in the
+        list and inserts it as the new tail Node of the list.
+        """
+        if node is self.head:
+            return
+        value = node.value
+        if node is self.head:
+            self.remove_from_head()
+        else:
+            node.delete()
+            self.length += 1
+        self.add_to_tail(value)
