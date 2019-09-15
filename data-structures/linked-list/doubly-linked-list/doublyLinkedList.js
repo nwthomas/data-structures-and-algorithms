@@ -135,10 +135,38 @@ class DoublyLinkedList {
     }
     this.addToTail(value);
   }
-}
 
-const node = new Node(1);
-node.insertBefore(5);
-console.log(node);
-node.insertAfter(3);
-console.log(node);
+  delete(node) {
+    /**
+     * Removes a Node from the list and handles cases where
+     * the Node was the head or the tail.
+     */
+    if (this.head === this.tail) {
+      this.head = null;
+      this.tail = null;
+    } else if (this.head === node) {
+      this.head = this.head.next;
+      node.delete();
+    } else if (this.tail === node) {
+      this.tail = this.tail.prev;
+      node.delete();
+    } else {
+      node.delete();
+    }
+    this.length--;
+  }
+
+  getMax() {
+    /**
+     * Returns the highest value currently in the list.
+     */
+    if (!self.length) return 0;
+    let highest = self.head.value;
+    let currentNode = self.head;
+    while (currentNode.next !== null) {
+      currentNode = currentNode.next;
+      if (highest < currentNode.value) highest = currentNode.value;
+    }
+    return highest;
+  }
+}
