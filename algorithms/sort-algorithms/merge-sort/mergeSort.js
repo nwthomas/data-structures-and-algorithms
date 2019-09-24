@@ -4,18 +4,12 @@ function merge(arrA, arrB) {
   const mergedArr = [];
   // Control flow for different outcomes
   for (let i = 0; i < elements; i++) {
-    if (!arrA.length) {
+    if (!arrA.length || arrA[0] > arrB[0]) {
       mergedArr.push(arrB[0]);
       arrB = arrB.slice(1, arrB.length);
-    } else if (!arrB.length) {
+    } else if (!arrB.length || arrB[0] > arrA[0]) {
       mergedArr.push(arrA[0]);
       arrA = arrA.slice(1, arrA.length);
-    } else if (arrA[0] < arrB[0]) {
-      mergedArr.push(arrA[0]);
-      arrA = arrA.slice(1, arrA.length);
-    } else {
-      mergedArr.push(arrB[0]);
-      arrB = arrB.slice(1, arrB.length);
     }
   }
   // Returns merged list at end of function call
@@ -23,7 +17,7 @@ function merge(arrA, arrB) {
 }
 
 function mergeSort(arr) {
-  // eturns list if the list is length of 1
+  // Returns list if the list is length of 1
   if (arr.length <= 1) {
     return arr;
   } else {
