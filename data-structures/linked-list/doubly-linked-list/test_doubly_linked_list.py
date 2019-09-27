@@ -87,37 +87,84 @@ class TestDoublyLinkedList(unittest.TestCase):
         """
         Tests that a Node has been moved to the front of the list
         """
-        pass
+        dll = DoublyLinkedList()
+        dll.add_to_head(1)
+        node = dll.head
+        dll.add_to_head(45)
+        dll.add_to_head(9)
+        dll.move_to_front(node)
+        self.assertEqual(dll.head.value, 1)
 
     def test_remove_from_head(self):
         """
         Tests that a Node has been removed from the head of the list
         """
-        pass
+        dll = DoublyLinkedList()
+        dll.add_to_head(1)
+        node = dll.tail
+        dll.add_to_tail(45)
+        dll.add_to_tail(9)
+        dll.move_to_end(node)
+        self.assertEqual(dll.tail.value, 1)
 
     def test_move_to_tail(self):
         """
         Tests that a Node has been moved to the tail of the list
         """
-        pass
+        dll = DoublyLinkedList()
+        dll.add_to_head("test1")
+        dll.add_to_head("test2")
+        dll.add_to_head("test3")
+        dll.add_to_head("test4")
+        dll.add_to_head("test5")
+        dll.remove_from_head()
+        self.assertEqual(dll.head.value, "test4")
 
     def test_remove_from_tail(self):
         """
         Tests that a Node has been removed from the tail of the list
         """
-        pass
+        dll = DoublyLinkedList()
+        dll.add_to_tail("test1")
+        dll.add_to_tail("test2")
+        dll.add_to_tail("test3")
+        dll.add_to_tail("test4")
+        dll.add_to_tail("test5")
+        dll.remove_from_tail()
+        self.assertEqual(dll.tail.value, "test4")
 
     def test_delete(self):
         """
         Tests that a Node has been deleted from the list
         """
-        pass
+        dll = DoublyLinkedList()
+        dll.add_to_head(1)
+        dll.add_to_head(344)
+        dll.add_to_head(7)
+        node = dll.head
+        dll.add_to_head(3)
+        dll.delete(node)
+        found_val = False
+        current_node = dll.head
+        while current_node:
+            if current_node.value == 7:
+                found_val = True
+            current_node = current_node.next
+        self.assertEqual(found_val, False)
 
     def test_get_max(self):
         """
         Tests that the maximum value in the list is returned
         """
-        pass
+        dll = DoublyLinkedList()
+        dll.add_to_head(1)
+        dll.add_to_head(2)
+        dll.add_to_head(3)
+        dll.add_to_head(4)
+        dll.add_to_head(517625)
+        dll.add_to_head(5)
+        max_val = dll.get_max()
+        self.assertEqual(max_val, 517625)
 
 
 if __name__ == '__main__':
