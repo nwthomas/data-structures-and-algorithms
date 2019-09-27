@@ -109,21 +109,36 @@ class SinglyLinkedList:
         Removes the current placement of the Node and moves it
         to the head of the list.
         """
-        pass
+        node_val = node.value
+        self.delete(node)
+        self.add_to_head(node_val)
 
     def move_to_end(self, node):
         """
         Removes the current placement of the Node and moves it
         to the tail of the list.
         """
-        pass
+        node_val = node.value
+        self.delete(node)
+        self.add_to_tail(node_val)
 
-    def delete(node):
+    def delete(self, node):
         """
         Removes a Node from the list and handles cases where
         the Node was the head of the tail.
         """
-        pass
+        node_val = node.value
+        current_node = self.head
+        previous_node = None
+        while current_node.next:
+            next = current_node.next
+            if current_node == Node:
+                currentNode.next = None
+                previous_node.next = next
+                currentNode = next
+            else:
+                current_node = next
+        return node_val
 
     def get_max(self):
         """

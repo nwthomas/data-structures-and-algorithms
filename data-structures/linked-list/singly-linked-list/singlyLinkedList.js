@@ -114,7 +114,7 @@ class SinglyLinkedList {
      * to the head of the list.
      */
     const nodeVal = node.value;
-    node.delete();
+    self.delete(node);
     this.addTohead(nodeVal);
   }
 
@@ -133,14 +133,13 @@ class SinglyLinkedList {
      * Removes a Node from the list and handles cases where
      * the Node was the head of the tail.
      */
-    let returnedVal = null;
+    let returnedVal = node.value;
     let currentNode = this.head;
     let previousNode = null;
     while (currentNode.next) {
       const next = currentNode.next;
       if (currentNode === node) {
         currentNode.next = null;
-        returnedVal = currentNode.value;
         previousNode.next = next;
         currentNode = next;
       } else {
