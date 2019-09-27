@@ -4,7 +4,7 @@
 
 ## PURPOSE
 
-This repository is my personal collection of data structures and assorted algorithms written in [Python](https://www.python.org/) and [JavaScript](https://www.ecma-international.org/). I will be updating this repository in the future to include interpretations of the algorithms in other languages.
+This repository is my personal collection of data structures and algorithms written in [Python](https://www.python.org/) and [JavaScript](https://www.ecma-international.org/). I will be updating this repository in the future to include interpretations of the algorithms in other languages.
 
 ## TABLE OF CONTENTS
 
@@ -23,6 +23,8 @@ This repository is my personal collection of data structures and assorted algori
     - [Quick Sort](algorithms/sort-algorithms/quick-sort)
     - [Selection Sort](algorithms/sort-algorithms/selection-sort)
 - [Data Structures](data-structures)
+  - [Cache](data-structures/cache)
+    - [Least Recently Used](data-structures/cache/least-recently-used)
   - [Linked List](data-structures/linked-list)
     - [Singly-Linked List](data-structures/linked-list/singly-linked-list)
     - [Doubly-Linked List](data-structures/linked-list/doubly-linked-list)
@@ -72,6 +74,7 @@ A [data structure](https://en.wikipedia.org/wiki/Data_structure) "allows data or
 - Thanks [Beej Jorgenson](https://github.com/beejjorgensen) for being a _boss_ of a computer science instructor at [Lambda School](https://lambdaschool.com/). You make things simple, easy, and understandable. That's the highest praise I could ever give someone teaching a complicated topic like CS.
 - Thank you to [Brad Fukumoto](https://github.com/br80). You're so knowledgeable, but you're also super approachable as a teacher; your passion for teaching shines through. Also, you have _boss_-level hobbies.
 - To [Sean Chen](https://github.com/seanchen1991), your skills are honestly off-the-rails. I have learned so much from watching you work. Thank you!
+- To [Brian Doyle](https://github.com/briandoyle81), thanks for being a friendly and knowledgeable CS instructor. You came in at the hardest point of CS and somehow made it great. Thank you!
 - Huge thanks to [Byron Homes](https://github.com/byronholmes2018) for getting me excited about data structures and algorithms. You're awesome and a genius.
 - Thanks to [Frank Faustino](https://github.com/frankfaustino) for inspiring me to create, build, and make my own data structures and algorithms repository. Your own journey has inspired my own.
 - Thanks to Aditya Bhargava, the author of [Grokking Algorithms](https://smile.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230/ref=sr_1_2?ie=UTF8&qid=1544921791&sr=8-2&keywords=grokking+algorithm). You inspired me to learn this stuff and start documenting it for ease of later use.

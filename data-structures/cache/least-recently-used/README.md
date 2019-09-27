@@ -1,4 +1,6 @@
-# SINGLY-LINKED LISTS 👆
+# LEAST RECENTLY USED CACHE 💰
+
+A `Least Recently Used Cache`, or `LRU Cache`,
 
 ## TABLE OF CONTENTS
 
@@ -9,10 +11,12 @@
 
 ## IMPLEMENTATIONS
 
-- [JavaScript](singlyLinkedList.js)
-- [Python](singly_linked_list.py)
+- [JavaScript](lruCache.js)
+- [Python](lru_cache.py)
 
 ## TYPE
+
+An `LRU Cache` is a type of cache. Caches allow us to preserve and memoize data so that we can access it quickly in the future.
 
 ## DATA STRUCTURE DESCRIPTION
 

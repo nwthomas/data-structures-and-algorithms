@@ -43,11 +43,11 @@ class DoublyLinkedList {
     this.length = node ? 1 : 0;
   }
 
-  length() {
+  getLength() {
     /**
      * Returns the length of the current list
      */
-    return self.length;
+    return this.length;
   }
 
   addToHead(value) {
@@ -160,9 +160,9 @@ class DoublyLinkedList {
     /**
      * Returns the highest value currently in the list.
      */
-    if (!self.length) return 0;
-    let highest = self.head.value;
-    let currentNode = self.head;
+    if (!this.length) return 0;
+    let highest = this.head.value;
+    let currentNode = this.head;
     while (currentNode.next !== null) {
       currentNode = currentNode.next;
       if (highest < currentNode.value) highest = currentNode.value;
@@ -170,3 +170,8 @@ class DoublyLinkedList {
     return highest;
   }
 }
+
+module.exports = {
+  Node,
+  DoublyLinkedList
+};

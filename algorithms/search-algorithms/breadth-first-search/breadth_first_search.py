@@ -1,14 +1,3 @@
-# Performance of O(|V| + |E|)
-
-deep = {  # Example object to be analyzed
-    1: 2,
-    3: {4: "a", "b": "c"},
-    5: {6: {7: 8}},
-    9: {10: {11: {12: {13: {14: {15: 16}}}}}},
-    10: "Whatever I want."
-}
-
-
 def breadthFirst(obj, item):
     queue = []
     key = ""
@@ -22,9 +11,3 @@ def breadthFirst(obj, item):
             for nestedKey in value:
                 queue.append(value[nestedKey])
     return False  # If the searchTerm is not found, return false
-
-
-print(breadthFirst(deep, "c"))  # Should return true
-print(breadthFirst(deep, "dude"))  # Should return false
-print(breadthFirst(deep, 16))  # Should return True
-print(breadthFirst(deep, 2))  # Should return True

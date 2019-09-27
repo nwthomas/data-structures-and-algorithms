@@ -1,4 +1,4 @@
-# DOUBLY-LINKED LISTS 🧙
+# DOUBLY-LINKED LISTS ✌️
 
 `Doubly-Linked Lists` are a data structure that allows allocation of memory and storage space in a non-linear manner.
 
