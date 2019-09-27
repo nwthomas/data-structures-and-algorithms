@@ -1,3 +1,13 @@
+/**
+ * The SinglyLinkedList class is used to instantiate a new list.
+ *
+ * The Node class is used to instantiate various Nodes along
+ * the SinglyLinkedList.
+ *
+ * Each Node has a reference to the Node after it (if it
+ * exists).
+ */
+
 class Node {
   constructor(value, next = null) {
     this.value = value;
@@ -10,7 +20,24 @@ class Node {
      * and inserts it after this Node
      */
     const node = new Node(value);
-    this.next = node;
+    if (!this.next) {
+      this.next = node;
+    } else {
+      const oldNext = this.next;
+      this.next = node;
+      this.next.next = oldNext;
+    }
+  }
+
+  delete() {
+    /**
+     * Deletes the pointer to the next Node, allowing
+     * garbage collection to clean it up.
+     *
+     * NOTE: You still must remove the previous Node's
+     * pointer via traversal inside the list.
+     */
+    this.next = null;
   }
 }
 
