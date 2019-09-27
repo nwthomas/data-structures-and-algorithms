@@ -1,6 +1,6 @@
 # DOUBLY-LINKED LISTS ✌️
 
-`Doubly-Linked Lists` are a data structure that allows allocation of memory and storage space in a non-linear manner.
+`Doubly-Linked Lists` are a data structure that allows allocation of memory and storage space in a non-linear manner. They are different from a singly-linked list in that you can traverse them forwards and backwards.
 
 ## TABLE OF CONTENTS
 
