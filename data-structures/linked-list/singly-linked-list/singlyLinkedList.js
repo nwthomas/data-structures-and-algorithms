@@ -54,7 +54,7 @@ class SinglyLinkedList {
     return this.length;
   }
 
-  addTohead(value) {
+  addToHead(value) {
     /**
      * Instantiates a new Node and inserts it as the new head
      * of the list.
@@ -62,6 +62,7 @@ class SinglyLinkedList {
     const newNode = new Node(value);
     newNode.next = this.head;
     this.head = newNode;
+    this.length++;
   }
 
   removeFromHead() {
@@ -73,6 +74,7 @@ class SinglyLinkedList {
     const oldHead = this.head;
     this.head.next = null;
     this.head = newHead;
+    this.length--;
     return oldHead.value;
   }
 
@@ -91,6 +93,7 @@ class SinglyLinkedList {
       }
       currentNode.next = newNode;
     }
+    this.length++;
   }
 
   removeFromTail() {
@@ -105,6 +108,7 @@ class SinglyLinkedList {
       currentNode = currentNode.next;
     }
     previous.next = null;
+    this.length--;
     return currentNode.value;
   }
 
@@ -114,8 +118,9 @@ class SinglyLinkedList {
      * to the head of the list.
      */
     const nodeVal = node.value;
-    self.delete(node);
-    this.addTohead(nodeVal);
+    node.delete(node);
+    this.length--;
+    this.addToHead(nodeVal);
   }
 
   moveToEnd(node) {
@@ -125,6 +130,7 @@ class SinglyLinkedList {
      */
     const nodeVal = node.value;
     node.delete();
+    this.length--;
     this.addToTail(nodeVal);
   }
 
@@ -136,16 +142,23 @@ class SinglyLinkedList {
     let returnedVal = node.value;
     let currentNode = this.head;
     let previousNode = null;
+
     while (currentNode.next) {
-      const next = currentNode.next;
-      if (currentNode === node) {
+      if (!this.length) {
+        return null;
+      } else if (this.length == 1 && this.head == node) {
+        this.head = null;
+      } else if (currentNode == node) {
+        const next = currentNode.next;
         currentNode.next = null;
         previousNode.next = next;
         currentNode = next;
       } else {
+        previousNode = currentNode;
         currentNode = currentNode.next;
       }
     }
+    this.length--;
     return returnedVal;
   }
 
