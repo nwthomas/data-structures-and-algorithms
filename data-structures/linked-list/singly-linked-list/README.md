@@ -1,6 +1,6 @@
 # SINGLY-LINKED LISTS 👆
 
-`Singly-Linked Lists` are a data structure that allows allocation of memory and storage space in a non-linear manner. They are different from doubly-linked lists in that you typically cannot traverse them in reverse.
+`Singly-Linked Lists` are a data structure that allows allocation of memory and storage space in a non-linear manner. They are different from doubly-linked lists in that you cannot traverse them in reverse.
 
 ## TABLE OF CONTENTS
 
