@@ -67,28 +67,42 @@ class SinglyLinkedList:
         Instantiates a new Node and inserts it as the new head
         of the list.
         """
-        pass
+        old_node = self.head
+        self.head = Node(value)
+        self.head.next = old_node
 
     def remove_from_head(self):
         """
         Removes the current head Node and sets the next Node
         as the head. It returns the removed Node value.
         """
-        pass
+        new_head = self.head.next
+        old_head_val = self.head.value
+        self.head.next = None
+        self.head = new_head
+        return old_head_val
 
     def add_to_tail(self, value):
         """
         Instantiates a new Node and inserts it as the new tail
         of the list.
         """
-        pass
+        current_node = self.head
+        while current_node.next:
+            current_node = current_node.next
+        current_node.next = Node(value)
 
     def remove_from_tail(self):
         """
         Removes the current tail Node and returns the removed Node
         value.
         """
-        pass
+        current_node = self.head
+        previous_node = None
+        while current_node.next:
+            previous_node = current_node
+            current_node = current_node.next
+        previous_node.next = None
 
     def move_to_front(self, node):
         """
@@ -115,7 +129,13 @@ class SinglyLinkedList:
         """
         Returns the maximum value currently in the list
         """
-        pass
+        max_val = self.head.value
+        currentNode = self.head
+        while currentNode.next:
+            currentNode = currentNode.next
+            if currentNode.value > max_val:
+                max_val = currentNode.value
+        return max_val
 
     def __getattr__(self):
         """
