@@ -126,14 +126,32 @@ class TestSinglyLinkedList(unittest.TestCase):
         Tests that a Node has been moved to the front
         of the list.
         """
-        pass
+        sll = SinglyLinkedList()
+        sll.add_to_head(1)
+        sll.add_to_head("testing")
+        node = sll.head
+        sll.add_to_head(5)
+        sll.move_to_front(node)
+        self.assertEqual(sll.head.value, "testing")
 
     def test_move_to_end(self):
         """
         Tests that a Node has been moved to the end of
         the list.
         """
-        pass
+        def get_tail_val(list):
+            currentNode = list.head
+            while currentNode.next:
+                currentNode = currentNode.next
+            return currentNode.value
+        sll = SinglyLinkedList()
+        sll.add_to_head(1)
+        sll.add_to_head(2)
+        sll.add_to_head("testing")
+        node = sll.head
+        sll.add_to_head(3)
+        sll.move_to_end(node)
+        self.assertEqual(get_tail_val(sll), "testing")
 
     def test_delete(self):
         """
