@@ -69,6 +69,7 @@ class SinglyLinkedList:
         """
         old_node = self.head
         self.head = Node(value)
+        self.length += 1
         self.head.next = old_node
 
     def remove_from_head(self):
@@ -80,6 +81,7 @@ class SinglyLinkedList:
         old_head_val = self.head.value
         self.head.next = None
         self.head = new_head
+        self.length -= 1
         return old_head_val
 
     def add_to_tail(self, value):
@@ -91,6 +93,7 @@ class SinglyLinkedList:
         while current_node.next:
             current_node = current_node.next
         current_node.next = Node(value)
+        self.length += 1
 
     def remove_from_tail(self):
         """
@@ -103,6 +106,7 @@ class SinglyLinkedList:
             previous_node = current_node
             current_node = current_node.next
         previous_node.next = None
+        self.length -= 1
 
     def move_to_front(self, node):
         """
@@ -112,6 +116,7 @@ class SinglyLinkedList:
         node_val = node.value
         self.delete(node)
         self.add_to_head(node_val)
+        self.length += 1
 
     def move_to_end(self, node):
         """
@@ -121,6 +126,7 @@ class SinglyLinkedList:
         node_val = node.value
         self.delete(node)
         self.add_to_tail(node_val)
+        self.length += 1
 
     def delete(self, node):
         """
@@ -138,6 +144,7 @@ class SinglyLinkedList:
                 currentNode = next
             else:
                 current_node = next
+        self.length -= 1
         return node_val
 
     def get_max(self):

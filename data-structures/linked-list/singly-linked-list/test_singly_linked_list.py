@@ -10,19 +10,28 @@ class TestNode(unittest.TestCase):
         node = Node(1)
         self.assertIsInstance(node, Node)
 
-    def test_insert_after(self, value):
+    def test_insert_after(self):
         """
         Tests that a new Node with the inputted value
         has been inserted after this one.
         """
-        pass
+        node = Node("testing1")
+        node.insert_after("testing2")
+        self.assertEqual(node.next.value, "testing2")
+        node.insert_after("testing3")
+        self.assertEqual(node.next.value, "testing3")
+        self.assertEqual(node.next.next.value, "testing2")
 
     def test_delete(self):
         """
         Tests that the Node reference pointer has been
         deleted.
         """
-        pass
+        node = Node(1)
+        node.insert_after(2)
+        self.assertEqual(node.next.value, 2)
+        node.delete()
+        self.assertEqual(node.next, None)
 
 
 class TestSinglyLinkedList(unittest.TestCase):
