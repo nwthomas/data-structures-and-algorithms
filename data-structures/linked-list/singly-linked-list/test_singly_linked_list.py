@@ -48,21 +48,36 @@ class TestSinglyLinkedList(unittest.TestCase):
         Tests that the correct length of the list is
         returned.
         """
-        pass
+        sll = SinglyLinkedList()
+        sll.add_to_head(1)
+        sll.add_to_head(2)
+        sll.add_to_head(3)
+        length = len(sll)
+        self.assertEqual(length, 3)
 
     def test_add_to_head(self):
         """
         Tests that a new Node has been added to the
         head of the list.
         """
-        pass
+        sll = SinglyLinkedList()
+        sll.add_to_head(1)
+        sll.add_to_head(2)
+        self.assertEqual(sll.head.value, 2)
+        sll.add_to_head(3)
+        self.assertEqual(sll.head.value, 3)
 
     def test_remove_from_head(self):
         """
         Tests that Node has been removed from the
         head of the list.
         """
-        pass
+        sll = SinglyLinkedList()
+        sll.add_to_head(1)
+        sll.add_to_head(2)
+        self.assertEqual(sll.head.value, 2)
+        sll.remove_from_head()
+        self.assertEqual(sll.head.value, 1)
 
     def test_add_to_tail(self):
         """
@@ -104,7 +119,13 @@ class TestSinglyLinkedList(unittest.TestCase):
         Tests that the maximum value in the list is
         returned.
         """
-        pass
+        sll = SinglyLinkedList()
+        sll.add_to_head(3)
+        sll.add_to_tail(9)
+        sll.add_to_head(10)
+        sll.add_to_head(4)
+        max_val = sll.get_max()
+        self.assertEqual(max_val, 10)
 
 
 if __name__ == "__main__":
