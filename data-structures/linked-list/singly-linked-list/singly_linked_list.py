@@ -89,10 +89,13 @@ class SinglyLinkedList:
         Instantiates a new Node and inserts it as the new tail
         of the list.
         """
-        current_node = self.head
-        while current_node.next:
-            current_node = current_node.next
-        current_node.next = Node(value)
+        if not self.head:
+            self.head = Node(value)
+        else:
+            current_node = self.head
+            while current_node.next:
+                current_node = current_node.next
+            current_node.next = Node(value)
         self.length += 1
 
     def remove_from_tail(self):

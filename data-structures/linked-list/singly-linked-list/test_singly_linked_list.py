@@ -84,14 +84,42 @@ class TestSinglyLinkedList(unittest.TestCase):
         Tests that a new Node has been added to
         the tail of the list.
         """
-        pass
+        def get_tail_val(list):
+            currentNode = list.head
+            while currentNode.next:
+                currentNode = currentNode.next
+            return currentNode.value
+        sll = SinglyLinkedList()
+        sll.add_to_tail(1)
+        sll.add_to_tail(2)
+        self.assertEqual(get_tail_val(sll), 2)
+        sll.add_to_tail(90)
+        self.assertEqual(get_tail_val(sll), 90)
 
     def test_remove_from_tail(self):
         """
         Tests that a Node has been removed from the
         tail of the list.
         """
-        pass
+        def get_tail_val(list):
+            currentNode = list.head
+            while currentNode.next:
+                currentNode = currentNode.next
+            return currentNode.value
+        sll = SinglyLinkedList()
+        sll.add_to_head(1)
+        sll.add_to_head(2)
+        sll.add_to_head(3)
+        sll.add_to_head(4)
+        sll.add_to_head(4)
+        sll.add_to_head(5)
+        sll.add_to_head(6)
+        sll.add_to_head(7)
+        sll.add_to_head(8)
+        sll.add_to_head(9)
+        sll.add_to_head(10)
+        sll.remove_from_tail()
+        self.assertEqual(get_tail_val(sll), 2)
 
     def test_move_to_front(self):
         """
