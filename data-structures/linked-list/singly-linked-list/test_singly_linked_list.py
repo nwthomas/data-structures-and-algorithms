@@ -66,6 +66,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         self.assertEqual(sll.head.value, 2)
         sll.add_to_head(3)
         self.assertEqual(sll.head.value, 3)
+        self.assertEqual(len(sll), 3)
 
     def test_remove_from_head(self):
         """
@@ -78,6 +79,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         self.assertEqual(sll.head.value, 2)
         sll.remove_from_head()
         self.assertEqual(sll.head.value, 1)
+        self.assertEqual(len(sll), 1)
 
     def test_add_to_tail(self):
         """
@@ -95,6 +97,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         self.assertEqual(get_tail_val(sll), 2)
         sll.add_to_tail(90)
         self.assertEqual(get_tail_val(sll), 90)
+        self.assertEqual(len(sll), 3)
 
     def test_remove_from_tail(self):
         """
@@ -111,7 +114,6 @@ class TestSinglyLinkedList(unittest.TestCase):
         sll.add_to_head(2)
         sll.add_to_head(3)
         sll.add_to_head(4)
-        sll.add_to_head(4)
         sll.add_to_head(5)
         sll.add_to_head(6)
         sll.add_to_head(7)
@@ -120,6 +122,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         sll.add_to_head(10)
         sll.remove_from_tail()
         self.assertEqual(get_tail_val(sll), 2)
+        self.assertEqual(len(sll), 9)
 
     def test_move_to_front(self):
         """
@@ -133,6 +136,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         sll.add_to_head(5)
         sll.move_to_front(node)
         self.assertEqual(sll.head.value, "testing")
+        self.assertEqual(len(sll), 3)
 
     def test_move_to_end(self):
         """
@@ -152,13 +156,35 @@ class TestSinglyLinkedList(unittest.TestCase):
         sll.add_to_head(3)
         sll.move_to_end(node)
         self.assertEqual(get_tail_val(sll), "testing")
+        self.assertEqual(len(sll), 4)
 
     def test_delete(self):
         """
         Tests that a Node has been deleted from the
         list.
         """
-        pass
+        def search_for_val(list, val):
+            currentNode = list.head
+            found_val = None
+            while currentNode.next:
+                if currentNode.value == val:
+                    found_val = currentNode.value
+                currentNode = currentNode.next
+            return found_val
+        sll = SinglyLinkedList()
+        sll.add_to_head(1)
+        sll.add_to_head(2)
+        sll.add_to_head(3)
+        sll.add_to_head(4)
+        sll.add_to_head(5)
+        node = sll.head
+        sll.add_to_head(6)
+        sll.add_to_head(7)
+        sll.add_to_head(8)
+        sll.add_to_head(9)
+        sll.add_to_head(10)
+        sll.delete(node)
+        self.assertEqual(search_for_val(sll, node.value), None)
 
     def test_get_max(self):
         """

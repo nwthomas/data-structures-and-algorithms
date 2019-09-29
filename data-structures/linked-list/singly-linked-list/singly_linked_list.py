@@ -119,7 +119,6 @@ class SinglyLinkedList:
         node_val = node.value
         self.delete(node)
         self.add_to_head(node_val)
-        self.length += 1
 
     def move_to_end(self, node):
         """
@@ -129,7 +128,6 @@ class SinglyLinkedList:
         node_val = node.value
         self.delete(node)
         self.add_to_tail(node_val)
-        self.length += 1
 
     def delete(self, node):
         """
@@ -141,11 +139,12 @@ class SinglyLinkedList:
         previous_node = None
         while current_node.next:
             next = current_node.next
-            if current_node == Node:
-                currentNode.next = None
+            if current_node == node:
+                current_node.next = None
                 previous_node.next = next
                 currentNode = next
             else:
+                previous_node = current_node
                 current_node = next
         self.length -= 1
         return node_val
