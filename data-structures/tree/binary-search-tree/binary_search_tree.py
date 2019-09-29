@@ -79,7 +79,7 @@ class BinarySearchTree:
 
     def in_order_dft(self, node):
         """
-        Prints all the values in order from low to high
+        Returns all the values in order from low to high
         """
         values = []
 
@@ -91,8 +91,7 @@ class BinarySearchTree:
                 dfs(n.left)
         dfs(node)
         values.sort()
-        for val in values:
-            print(val)
+        return values
 
     def bft_print(self, node):
         """
