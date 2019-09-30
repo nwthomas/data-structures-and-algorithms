@@ -28,6 +28,9 @@ This repository is my personal collection of data structures and algorithms writ
   - [Linked List](data-structures/linked-list)
     - [Singly-Linked List](data-structures/linked-list/singly-linked-list)
     - [Doubly-Linked List](data-structures/linked-list/doubly-linked-list)
+  - [Tree](data-structures/tree)
+    - [AVL Tree](data-structures/tree/avl-tree)
+    - [Binary Search Tree](data-structures/tree/binary-search-tree)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 
