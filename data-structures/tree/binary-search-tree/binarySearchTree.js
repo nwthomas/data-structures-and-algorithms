@@ -43,13 +43,13 @@ class BinarySearchTree {
     while (true) {
       if (current.value === target) {
         return true;
-      } else if (current.value > value && current.left) {
+      } else if (current.value > target && current.left) {
         current = current.left;
-      } else if (current.value <= value && current.right) {
+      } else if (current.value <= target && current.right) {
         current = current.right;
-      } else if (current.value > value && !current.left) {
+      } else if (current.value > target && !current.left) {
         return false;
-      } else if (current.value <= value && !current.right) {
+      } else if (current.value <= target && !current.right) {
         return false;
       }
     }
@@ -79,14 +79,14 @@ class BinarySearchTree {
     /**
      * Returns all the values in order from low to high.
      */
-    const values = [];
+    let values = [];
     function dfs(n) {
       values.push(n.value);
       if (n.right) dfs(n.right);
       if (n.left) dfs(n.left);
     }
     dfs(node);
-    values.sort();
+    values = values.sort((a, b) => a - b);
     return values;
   }
 }
