@@ -91,3 +91,8 @@ typings/
 
 # Python files
 __pycache__/
+
+# Temporary changes for WIPs
+treessss/
+heaps/
+caches/
