@@ -10,52 +10,74 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = BinarySearchTree(1)
         self.assertIsInstance(bst, BinarySearchTree)
 
-    def test_insert(self, value):
+    def test_insert(self):
         """
         Tests that a new value has been inserted into the BST
         successfully.
         """
-        pass
+        bst = BinarySearchTree(65)
+        bst.insert(67)
+        bst.insert(4)
+        bst.insert(55)
+        bst.insert(80)
+        fourty = bst.contains(40)
+        four = bst.contains(4)
+        self.assertFalse(fourty)
+        self.assertTrue(four)
 
-    def test_contains(self, value):
+    def test_contains(self):
         """
         Tests that a value is currently contained in the BST.
         """
-        pass
+        bst = BinarySearchTree("Test1")
+        bst.insert("Test2")
+        bst.insert("Beginning")
+        bst.insert("Test")
+        bst.insert("Testing")
+        bst.insert("AAA")
+        bst.insert("ZZZ")
+        word = bst.contains("ZZZ")
+        not_word = bst.contains("this is a test")
+        self.assertTrue(word)
+        self.assertFalse(not_word)
 
     def test_get_max(self):
         """
         Tests that the maximum value in the BST is successfully
         returned.
         """
-        pass
-
-    def test_for_each(self):
-        """
-        Tests that the for_each() method operates on the BST
-        using the callback function that is passed in.
-        """
-        pass
+        bst = BinarySearchTree(65)
+        bst.insert(67)
+        bst.insert(4)
+        bst.insert(55)
+        bst.insert(80)
+        bst.insert(5678)
+        bst.insert(34)
+        bst.insert(978)
+        bst.insert(1)
+        bst.insert(-49)
+        bst.insert(-380)
+        max = bst.get_max()
+        self.assertEqual(max, 5678)
 
     def test_in_order_dft(self):
         """
         Tests that all the values are retrieved from low to high.
         """
-        pass
-
-    def test_bft_print(self):
-        """
-        Retrieves the value of every node in a breadth-first
-        traversal.
-        """
-        pass
-
-    def test_dft_print(self):
-        """
-        Retrieves the value of every node in a depth-first
-        traversal.
-        """
-        pass
+        bst = BinarySearchTree(65)
+        bst.insert(67)
+        bst.insert(4)
+        bst.insert(55)
+        bst.insert(80)
+        bst.insert(5678)
+        bst.insert(34)
+        bst.insert(978)
+        bst.insert(1)
+        bst.insert(-49)
+        bst.insert(-380)
+        values = bst.in_order_dft(bst)
+        self.assertEqual(
+            values, [-380, -49, 1, 4, 34, 55, 65, 67, 80, 978, 5678])
 
 
 if __name__ == "__main__":

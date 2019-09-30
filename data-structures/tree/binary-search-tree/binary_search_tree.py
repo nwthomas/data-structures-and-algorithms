@@ -7,10 +7,10 @@ Each one has a value as well as a reference to the next left and right points (i
 
 
 class BinarySearchTree:
-    def __init__(self, value):
+    def __init__(self, value, left=None, right=None):
         self.value = value
-        self.left = None
-        self.right = None
+        self.left = left
+        self.right = right
 
     def insert(self, value):
         """
@@ -66,17 +66,6 @@ class BinarySearchTree:
                 highest = current.value
         return highest
 
-    def for_each(self, callback):
-        """
-        Traverses every node in the BST and performs the
-        callback function on it.
-        """
-        callback(self.value)
-        if self.left:
-            self.left.for_each(callback)
-        if self.right:
-            self.right.for_each(callback)
-
     def in_order_dft(self, node):
         """
         Returns all the values in order from low to high
@@ -92,34 +81,3 @@ class BinarySearchTree:
         dfs(node)
         values.sort()
         return values
-
-    def bft_print(self, node):
-        """
-        Print the value of every node, starting with the given node,
-        in an iterative breadth first traversal
-        """
-        queue = []
-        print(self.value)
-        if node.left:
-            queue.append(node.left)
-        if node.right:
-            queue.append(node.right)
-        while len(queue) > 0:
-            current = queue[0]
-            if current.left:
-                queue.append(current.left)
-            if current.right:
-                queue.append(current.right)
-            print(current.value)
-            queue = queue[1:]
-
-    def dft_print(self, node):
-        """
-        Prints the value of every node, starting with the given node,
-        in an iterative depth first traversal
-        """
-        print(node.value)
-        if node.right:
-            self.dft_print(node.right)
-        if node.left:
-            self.dft_print(node.left)
