@@ -81,3 +81,4 @@ A [data structure](https://en.wikipedia.org/wiki/Data_structure) "allows data or
 - Huge thanks to [Byron Homes](https://github.com/byronholmes2018) for getting me excited about data structures and algorithms. You're awesome and a genius.
 - Thanks to [Frank Faustino](https://github.com/frankfaustino) for inspiring me to create, build, and make my own data structures and algorithms repository. Your own journey has inspired my own.
 - Thanks to Aditya Bhargava, the author of [Grokking Algorithms](https://smile.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230/ref=sr_1_2?ie=UTF8&qid=1544921791&sr=8-2&keywords=grokking+algorithm). You inspired me to learn this stuff and start documenting it for ease of later use.
+- Thanks to [bigocheatsheet.com](https://www.bigocheatsheet.com/) for your useful descriptions of Big O Notation and graphs that I have used in this `README`.

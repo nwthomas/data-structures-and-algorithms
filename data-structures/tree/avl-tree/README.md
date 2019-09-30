@@ -2,7 +2,7 @@
 
 An `AVL Tree` is a balanced `Binary Search Tree`. This means that an `AVL Tree` is always a valid `Binary Search Tree`, but a valid `Binary Search Tree` is _not_ always a valid `AVL Tree`.
 
-An `AVL Tree` allows us to avoid the worst-case performance of a `Binary Search Tree` (where you insert a sorted array/list into it) of `O(n)`, and balances the tree out so that all branches are more equal.
+An `AVL Tree` allows us to avoid the worst-case performance of a `Binary Search Tree` (where you insert a sorted `array`/`list` into it) of `O(n)`, and balances the `tree` out so that all branches are more equal.
 
 ## TABLE OF CONTENTS
 
