@@ -93,6 +93,7 @@ typings/
 __pycache__/
 
 # Temporary changes for WIPs
-treessss/
-heaps/
-caches/
+avl-tree/
+heap/
+cache/
+hash-table/
