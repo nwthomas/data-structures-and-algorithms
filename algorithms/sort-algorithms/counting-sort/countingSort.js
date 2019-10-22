@@ -18,3 +18,5 @@ function countingSort(arr) {
   });
   return final;
 }
+
+module.exports = countingSort;
