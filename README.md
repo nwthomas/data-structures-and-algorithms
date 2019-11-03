@@ -21,6 +21,7 @@ This repository is my personal collection of data structures and algorithms writ
     - [Insertion Sort](algorithms/sort-algorithms/insertion-sort)
     - [Merge Sort](algorithms/sort-algorithms/merge-sort)
     - [Quick Sort](algorithms/sort-algorithms/quick-sort)
+    - [Radix Sort](algorithms/sort-algorithms/radix-sort)
     - [Selection Sort](algorithms/sort-algorithms/selection-sort)
 - [Data Structures](data-structures)
   - [Linked List](data-structures/linked-list)

@@ -32,4 +32,4 @@ Radix Sort is a non-comparison sorting algorithm. It sorts numbers (and only num
 
 Radix Sort is one of the most efficient sorting algorithms you can use in common use, but it's limited to numbers as it makes use of the special radix (or base) property of numbers.
 
-Radix Sort has a time complexity of `O(n)` and a space complexity of `O(n)`.
+Radix Sort has a time complexity of `O(kn)` and a space complexity of `O(kn)`.
