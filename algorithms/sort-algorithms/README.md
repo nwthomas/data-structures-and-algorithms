@@ -9,4 +9,5 @@ Sorting algorithms are typically used to find data in a storage structure.
 - [Insertion Sort](insertion-sort)
 - [Merge Sort](merge-sort)
 - [Quick Sort](quick-sort)
+- [Radix Sort](radix-sort)
 - [Selection Sort](selection-sort)
