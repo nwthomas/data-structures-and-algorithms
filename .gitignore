@@ -95,5 +95,5 @@ __pycache__/
 # Temporary changes for WIPs
 avl-tree/
 heap/
-cache/
+least-recently-used/
 hash-table/
