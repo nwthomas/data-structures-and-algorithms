@@ -6,3 +6,4 @@ Searching algorithms are used to parse and find data stored in a given data stru
 
 - [Binary Search](binary-search)
 - [Breadth-First Search](breadth-first-search)
+- [Depth-First Search](depth-first-search)

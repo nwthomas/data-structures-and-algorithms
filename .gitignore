@@ -1,6 +1,7 @@
+# VS Code settings
 .vscode
-algorithms/search-algorithms/dijkstras-algorithm/
-# Dijkstra's work in progress
+
+# Yarn and log files
 logs
 *.log
 npm-debug.log*
@@ -93,7 +94,10 @@ typings/
 __pycache__/
 
 # Temporary changes for WIPs
-avl-tree/
+data_structures/tree/avl_tree/
 heap/
-least-recently-used/
-hash-table/
+least_recently_used/
+hash_table/
+algorithms/search_algorithms/dijkstras_algorithm/
+algorithms/search_algorithms/depth-first_search/
+data_structures/hash_table

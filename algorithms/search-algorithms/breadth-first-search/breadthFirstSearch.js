@@ -1,13 +1,16 @@
-function breadthFirstSearch(obj, searchTerm) {
-  let queue = [];
-  for (let key in obj) queue.push(obj[key]); // Initial push of keys to queue array
-  while (queue.length > 0) {
-    let value = queue.shift(); // Removes each key value from array
-    if (value === searchTerm) return true; // Exit condition - If searchTerm is found, return true
-    if (typeof value === 'object') {
-      // If key is object, push key values in object to queue array
-      for (let nestedKey in value) queue.push(value[nestedKey]);
+function breadthFirstSearch(rootNode, searchValue) {
+  let queue = [rootNode];
+  while (queue.length) {
+    const node = queue[0];
+    if (node.value && node.value === searchValue) {
+      return true;
+    } else if (node.left || node.right) {
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
     }
+    queue.shift();
   }
-  return false; // If the searchTerm is not found, return false
+  return false;
 }
+
+module.exports = breadthFirstSearch;

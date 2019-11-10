@@ -7,9 +7,9 @@ These data structures are key interview topic for a reason - They are used all o
 ## TABLE OF CONTENTS
 
 - [Cache](cache)
-  - [Ring Buffer](cache/ring-buffer)
-- [Linked List](linked-list)
-  - [Singly-Linked List](linked-list/singly-linked-list)
-  - [Doubly-Linked List](linked-list/doubly-linked-list)
+  - [Ring Buffer](cache/ring_buffer)
+- [Linked List](linked_list)
+  - [Singly-Linked List](linked_list/singly_linked_list)
+  - [Doubly-Linked List](linked_list/doubly_linked_list)
 - [Tree](tree)
-  - [Binary Search Tree](tree/binary-search-tree)
+  - [Binary Search Tree](tree/binary_search_tree)
