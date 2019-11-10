@@ -9,5 +9,5 @@ def breadth_first_search(root_node, search_value):
                 queue.append(node.left)
             if node.right is not None:
                 queue.append(node.right)
-            queue = queue[1:]
+        queue = queue[1:]
     return False

@@ -1,5 +1,5 @@
 const bfs = require('./breadthFirstSearch.js');
-const BinarySearchTree = require('../../../data-structures/tree/binary-search-tree/binarySearchTree.js');
+const BinarySearchTree = require('../../../data_structures/tree/binary_search_tree/binarySearchTree.js');
 
 describe('breadthFirstSearch()', () => {
   let BST = null;

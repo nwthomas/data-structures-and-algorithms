@@ -1,4 +1,4 @@
-<h1 align="center"><img src="assets/readme-header.png" /></h1>
+<h1 align="center"><img src="assets/readme_header.png" /></h1>
 <h4 align="center">A collection of data structures and algorithms implemented in Python and JavaScript.</h4>
 <br>
 
@@ -12,24 +12,24 @@ This repository is my personal collection of data structures and algorithms writ
 - [What is an Algorithm?](#what-is-an-algorithm)
 - [What is a Data Structure?](#what-is-a-data-structure)
 - [Algorithms](algorithms/)
-  - [Search Algorithms](algorithms/search-algorithms)
-    - [Binary Search](algorithms/search-algorithms/binary-search)
-    - [Breadth-First Search](algorithms/search-algorithms/breadth-first-search)
-    - [Depth-First Search](algorithms/search-algorithms/depth-first-search)
-  - [Sort Algorithms](algorithms/sort-algorithms)
-    - [Bubble Sort](algorithms/sort-algorithms/bubble-sort)
-    - [Counting Sort](algorithms/sort-algorithms/counting-sort)
-    - [Insertion Sort](algorithms/sort-algorithms/insertion-sort)
-    - [Merge Sort](algorithms/sort-algorithms/merge-sort)
-    - [Quick Sort](algorithms/sort-algorithms/quick-sort)
-    - [Radix Sort](algorithms/sort-algorithms/radix-sort)
-    - [Selection Sort](algorithms/sort-algorithms/selection-sort)
-- [Data Structures](data-structures)
-  - [Linked List](data-structures/linked-list)
-    - [Singly-Linked List](data-structures/linked-list/singly-linked-list)
-    - [Doubly-Linked List](data-structures/linked-list/doubly-linked-list)
-  - [Tree](data-structures/tree)
-    - [Binary Search Tree](data-structures/tree/binary-search-tree)
+  - [Search Algorithms](algorithms/search_algorithms)
+    - [Binary Search](algorithms/search_algorithms/binary_search)
+    - [Breadth-First Search](algorithms/search_algorithms/breadth_first_search)
+    - [Depth-First Search](algorithms/search_algorithms/depth_first_search)
+  - [Sort Algorithms](algorithms/sort_algorithms)
+    - [Bubble Sort](algorithms/sort_algorithms/bubble_sort)
+    - [Counting Sort](algorithms/sort_algorithms/counting_sort)
+    - [Insertion Sort](algorithms/sort_algorithms/insertion_sort)
+    - [Merge Sort](algorithms/sort_algorithms/merge_sort)
+    - [Quick Sort](algorithms/sort_algorithms/quick_sort)
+    - [Radix Sort](algorithms/sort_algorithms/radix_sort)
+    - [Selection Sort](algorithms/sort_algorithms/selection_sort)
+- [Data Structures](data_structures)
+  - [Linked List](data_structures/linked_list)
+    - [Singly-Linked List](data_structures/linked_list/singly_linked_list)
+    - [Doubly-Linked List](data_structures/linked_list/doubly_linked_list)
+  - [Tree](data_structures/tree)
+    - [Binary Search Tree](data_structures/tree/binary_search_tree)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 
@@ -57,7 +57,7 @@ There are two variations of `Big O`:
 
 Here's a graph that compares various common `Big O` curves:
 
-<div align="center"><img alt="Big O Notation chart" src="./assets/big-o-complexity-chart.png"/></div>
+<div align="center"><img alt="Big O Notation chart" src="./assets/big_o_complexity_chart.png"/></div>
 
 ## WHAT IS AN ALGORITHM?
 
