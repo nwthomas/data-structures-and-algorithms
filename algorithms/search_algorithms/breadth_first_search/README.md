@@ -16,7 +16,7 @@
 
 ## TYPE
 
-`Breadth-First Search` is a traversing algorithm where you should start traversing from a selected node and look at layers of the node tree one layer at a time.
+`Breadth-First Search` is a traversal algorithm where you should start traversing from a selected node and look at layers of the node tree one layer at a time.
 
 ## ALGORITHM DESCRIPTION
 
@@ -25,8 +25,8 @@
    View every node in that level
    Push lower nodes to a queue
 3. If the item being searched for is not found in the current level, go down one level
-4. Repeat until the item is found or all nodes are exhausted
+4. Repeat until the value is found or all nodes are exhausted in the tree
 
 ## SPACE AND TIME COMPLEXITY
 
-The `Breadth-First Search` algorithm as a time complexity of `O(|V| + |E|)`. Its space complexity is `O(n)` where `n` is the space taken up by the number of nodes being searched.
+The `Breadth-First Search` algorithm has a time complexity of `O(|V| + |E|)`. Its space complexity is `O(n)` where `n` is the space taken up by the number of nodes being searched.
