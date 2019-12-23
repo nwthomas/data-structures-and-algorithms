@@ -6,14 +6,17 @@ module.exports = {
   clearMocks: true,
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: ["/node_modules/"],
+  coveragePathIgnorePatterns: ['/node_modules/'],
 
   // Displays a custom name alongside each test as it runs
-  displayName: "DS AND ALGOS",
+  displayName: 'DS AND ALGOS',
 
   // The test environment that will be used for testing
-  testEnvironment: "node",
+  testEnvironment: 'node',
 
   // Indicates whether each individual test should be reported during the run
-  verbose: true
+  verbose: true,
+
+  // Allows for custom setup configurations
+  setupFilesAfterEnv: ['jest-extended']
 };
