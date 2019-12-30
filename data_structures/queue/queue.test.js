@@ -111,7 +111,7 @@ describe('Queue', () => {
     });
 
     describe('addValue()', () => {
-      test('adds a value to the tail of the list', () => {
+      test('adds a value to the tail of the queue', () => {
         const queue = new Queue();
         queue.addValue(1);
         queue.addValue(2);
@@ -121,7 +121,7 @@ describe('Queue', () => {
         expect(headValue).toBe(1);
       });
 
-      test('preserves the proper head and tail of the list', () => {
+      test('preserves the proper head and tail of the queue', () => {
         const queue = utils.createQueue(100);
         const headValue = queue._head.getValue();
         const tailValue = queue._tail.getValue();
