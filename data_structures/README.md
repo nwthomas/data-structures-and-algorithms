@@ -16,6 +16,7 @@ These data structures are key interview topic for a reason - They are used all o
   - [Doubly-Linked List](linked_list/doubly_linked_list)
 
 - [Queue](queue)
+- [Stack](stack)
 - [Tree](tree)
 
   - [Binary Search Tree](tree/binary_search_tree)

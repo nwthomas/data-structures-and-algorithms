@@ -39,7 +39,7 @@ This repository is my personal collection of data structures and algorithms writ
     - [Doubly-Linked List](data_structures/linked_list/doubly_linked_list)
 
   - [Queue](data_structures/queue)
-
+  - [Stack](data_structures/stack)
   - [Tree](data_structures/tree)
 
     - [Binary Search Tree](data_structures/tree/binary_search_tree)
