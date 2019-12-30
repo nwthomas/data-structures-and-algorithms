@@ -109,5 +109,57 @@ describe('Queue', () => {
         expect(result).toBe(100);
       });
     });
+
+    describe('addValue()', () => {
+      test('adds a value to the tail of the list', () => {
+        const queue = new Queue();
+        queue.addValue(1);
+        queue.addValue(2);
+        const tailValue = queue._tail.getValue();
+        const headValue = queue._head.getValue();
+        expect(tailValue).toBe(2);
+        expect(headValue).toBe(1);
+      });
+
+      test('preserves the proper head and tail of the list', () => {
+        const queue = utils.createQueue(100);
+        const headValue = queue._head.getValue();
+        const tailValue = queue._tail.getValue();
+        expect(headValue).toBe(1);
+        expect(tailValue).toBe(100);
+      });
+
+      test('adds the same value to head and tail if Queue is empty', () => {
+        const queue = new Queue();
+        queue.addValue('test');
+        const headValue = queue._head.getValue();
+        const tailValue = queue._tail.getValue();
+        expect(headValue).toBe('test');
+        expect(tailValue).toBe('test');
+      });
+    });
+
+    describe('delete()', () => {
+      test('removes a value from the head of the Queue', () => {
+        const queue = utils.createQueue(10);
+        queue.deleteNode();
+        const headValue = queue._head.getValue();
+        expect(headValue).toBe(2);
+      });
+
+      test('returns the value of the deleted Node', () => {
+        const queue = utils.createQueue(1000);
+        const deletedValue = queue.deleteNode();
+        expect(deletedValue).toBe(1);
+      });
+
+      test('returns the correct length after deleting a Node', () => {
+        const queue = utils.createQueue(1000);
+        queue.deleteNode();
+        queue.deleteNode();
+        const result = queue.length();
+        expect(result).toBe(998);
+      });
+    });
   });
 });

@@ -80,7 +80,8 @@ class Queue {
       this._head = newNode;
       this._tail = newNode;
     } else {
-      this._head.addValue(value);
+      this._tail.addValue(value);
+      this._tail = this._tail._next;
     }
     this._length++;
   }
@@ -90,7 +91,9 @@ class Queue {
      * Deletes a value from the front of the Queue
      * and returns the value from the deleted Node
      */
-    const deletedValue = this._head.delete();
+    const oldHeadNode = this._head;
+    this._head = this._head._next;
+    const deletedValue = oldHeadNode.delete();
     if (this.length() <= 1) {
       this._head = null;
       this._tail = null;
