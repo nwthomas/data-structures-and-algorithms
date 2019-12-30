@@ -15,7 +15,6 @@ This repository is my personal collection of data structures and algorithms writ
   - [Search Algorithms](algorithms/search_algorithms)
     - [Binary Search](algorithms/search_algorithms/binary_search)
     - [Breadth-First Search](algorithms/search_algorithms/breadth_first_search)
-    - [Depth-First Search](algorithms/search_algorithms/depth_first_search)
   - [Sort Algorithms](algorithms/sort_algorithms)
     - [Bubble Sort](algorithms/sort_algorithms/bubble_sort)
     - [Counting Sort](algorithms/sort_algorithms/counting_sort)
