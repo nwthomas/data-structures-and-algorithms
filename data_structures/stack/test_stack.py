@@ -3,7 +3,10 @@ import unittest
 
 
 class TestStack(unittest.TestCase):
-    pass
+    def test_instantiates(self):
+        """
+        Instantiates a new version of the 
+        """
 
 
 if __name__ == "__main__":
