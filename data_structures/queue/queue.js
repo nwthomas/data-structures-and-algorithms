@@ -26,7 +26,7 @@ class Node {
 
   addValue(value) {
     /**
-     * Adds a new value to the end of the linked-list
+     * Adds a new value to the end of the linked list
      * and returns the newly-created Node
      */
     let current = this;
@@ -39,7 +39,7 @@ class Node {
 
   delete() {
     /**
-     * Deletes the current Node from the linked-list and
+     * Deletes the current Node from the linked list and
      * returns its value
      */
     const current = this;
