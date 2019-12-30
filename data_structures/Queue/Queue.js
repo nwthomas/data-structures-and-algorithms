@@ -43,13 +43,17 @@ class Node {
      * returns its value
      */
     const current = this;
-    const previous = this.previous;
+    const previous = this._previous;
     const next = this._next;
-    previous._next = next;
-    next._previous = previous;
-    this._next = null;
-    this._previous = null;
-    return current._value;
+    if (previous) {
+      previous._next = next;
+    }
+    if (next) {
+      next._previous = previous;
+    }
+    current._next = null;
+    current._previous = null;
+    return current.getValue();
   }
 }
 
