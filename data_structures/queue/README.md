@@ -3,8 +3,8 @@
 A `Queue` is a unique structure that operates on a "first-in, first-out"
 priority schedule.
 
-A typical Queue will have two basic operations in addition to storing
-data, which are adding data to the back of the Queue and removing data
+A typical `Queue` will have two basic operations in addition to storing
+data, which are adding data to the back of the `Queue` and removing data
 from the front of it.
 
 ## TABLE OF CONTENTS
@@ -25,7 +25,7 @@ A `Queue` is an abstract data structure and is open at both ends; this allows th
 
 ## DATA STRUCTURE DESCRIPTION
 
-A `Queue` is a data structure that stores data in a "first-in, first-out" fashion. In other words, any value stored first in a list will then be the first value to be removed, followed by the second, etc.
+A `Queue` is a data structure that stores data in a "first-in, first-out" fashion. In other words, any value stored first in a `Queue` will then be the first value to be removed, followed by the second, etc.
 
 ## SPACE AND TIME COMPLEXITY
 

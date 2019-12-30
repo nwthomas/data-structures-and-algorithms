@@ -38,7 +38,7 @@ This repository is my personal collection of data structures and algorithms writ
     - [Singly-Linked List](data_structures/linked_list/singly_linked_list)
     - [Doubly-Linked List](data_structures/linked_list/doubly_linked_list)
 
-  - [Queue](queue)
+  - [Queue](data_structures/queue)
 
   - [Tree](data_structures/tree)
 
