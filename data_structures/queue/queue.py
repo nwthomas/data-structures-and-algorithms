@@ -49,3 +49,43 @@ class Node:
         current._next = None
         current._previous = None
         return current.get_value()
+
+
+class Queue:
+    def __init__(self):
+        self._head = None
+        self._tail = None
+        self._length = 0
+
+    def length(self):
+        """
+        Returns the current lengthe of the Queue
+        """
+        return self._length
+
+    def add_value(self, value):
+        """
+        Adds a new value to the tail of the Queue
+        """
+        if self._head == None and self._tail == None:
+            new_node = Node(value)
+            self._head = new_node
+            self._tail = new_node
+        else:
+            self._tail.add_value(value)
+            self._tail = self._tail._next
+        self._length += 1
+
+    def delete_node(self):
+        """
+        Deletes the value from the front of the Queue
+        and returns the value from the deleted Node
+        """
+        old_head_node = self._head
+        self._head = self._head._next
+        deleted_value = old_head_node.get_value()
+        if self.length() <= 1:
+            self._head = None
+            self._tail = None
+        self._length -= 1
+        return deleted_value
