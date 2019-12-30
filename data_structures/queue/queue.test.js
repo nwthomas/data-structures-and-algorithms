@@ -64,7 +64,7 @@ describe('Queue', () => {
         expect(result).toBe(2);
       });
 
-      test('adds a value to the end of a longer linked-list', () => {
+      test('adds a value to the end of a longer linked list', () => {
         const list = utils.createList(10);
         const result = list._next._next._next._next._next._next._next._next._next.getValue();
         expect(result).toBe(10);
