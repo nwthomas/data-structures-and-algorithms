@@ -11,6 +11,13 @@ const utils = {
       }
     }
     return list;
+  },
+  createQueue: function createQueue(length) {
+    const queue = new Queue();
+    for (let i = 1; i <= length; i++) {
+      queue.addValue(i);
+    }
+    return queue;
   }
 };
 
@@ -82,6 +89,25 @@ describe('Queue', () => {
   });
 
   describe('Queue', () => {
-    // finish
+    describe('instantiates', () => {
+      test('instantiates a new version of Queue', () => {
+        const queue = new Queue();
+        expect(queue instanceof Queue).toBeTruthy();
+      });
+    });
+
+    describe('length()', () => {
+      test('returns 0 when no values have been added to the Queue', () => {
+        const queue = new Queue();
+        const result = queue.length();
+        expect(result).toBe(0);
+      });
+
+      test('should return the correct length of a long list', () => {
+        const queue = utils.createQueue(100);
+        const result = queue.length();
+        expect(result).toBe(100);
+      });
+    });
   });
 });
