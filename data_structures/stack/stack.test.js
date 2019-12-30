@@ -7,7 +7,7 @@ describe('Stack', () => {
       expect(stack instanceof Stack).toBeTruthy();
     });
 
-    test('instantiates with null as default', () => {
+    test('instantiates with empty as default', () => {
       const stack = new Stack();
       expect(stack._stack).toEqual([]);
     });
@@ -34,7 +34,7 @@ describe('Stack', () => {
   });
 
   describe('push()', () => {
-    test('adds a value to the top of the Stack', () => {
+    test('pushes a value to the top of the Stack', () => {
       const stack = new Stack(1);
       stack.push(2);
       stack.push(3);
