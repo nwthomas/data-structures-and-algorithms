@@ -12,9 +12,12 @@ This repository is my personal collection of data structures and algorithms writ
 - [What is an Algorithm?](#what-is-an-algorithm)
 - [What is a Data Structure?](#what-is-a-data-structure)
 - [Algorithms](algorithms/)
+
   - [Search Algorithms](algorithms/search_algorithms)
+
     - [Binary Search](algorithms/search_algorithms/binary_search)
     - [Breadth-First Search](algorithms/search_algorithms/breadth_first_search)
+
   - [Sort Algorithms](algorithms/sort_algorithms)
     - [Bubble Sort](algorithms/sort_algorithms/bubble_sort)
     - [Counting Sort](algorithms/sort_algorithms/counting_sort)
@@ -23,12 +26,24 @@ This repository is my personal collection of data structures and algorithms writ
     - [Quick Sort](algorithms/sort_algorithms/quick_sort)
     - [Radix Sort](algorithms/sort_algorithms/radix_sort)
     - [Selection Sort](algorithms/sort_algorithms/selection_sort)
+
 - [Data Structures](data_structures)
+
+  - [Cache](data_structures/cache)
+
+    - [Ring Buffer](cache/ring_buffer)
+
   - [Linked List](data_structures/linked_list)
+
     - [Singly-Linked List](data_structures/linked_list/singly_linked_list)
     - [Doubly-Linked List](data_structures/linked_list/doubly_linked_list)
+
+  - [Queue](queue)
+
   - [Tree](data_structures/tree)
+
     - [Binary Search Tree](data_structures/tree/binary_search_tree)
+
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 

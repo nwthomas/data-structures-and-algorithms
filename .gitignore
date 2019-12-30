@@ -94,4 +94,5 @@ typings/
 __pycache__/
 
 # Temporary changes for WIPs
-/data_structures/tree/not_done_avl_tree/
+/data_structures/tree/avl_tree/
+/data_structures/renamed_graph/
