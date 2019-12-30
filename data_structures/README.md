@@ -12,6 +12,7 @@ These data structures are key interview topic for a reason - They are used all o
 - [Linked List](linked_list)
   - [Singly-Linked List](linked_list/singly_linked_list)
   - [Doubly-Linked List](linked_list/doubly_linked_list)
+- [Queue](queue)
 - [Tree](tree)
   - [Adelson-Velsky and Landis (AVL) Tree](tree/avl_tree)
   - [Binary Search Tree](tree/binary_search_tree)
