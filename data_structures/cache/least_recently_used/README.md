@@ -1,6 +1,7 @@
 # LEAST RECENTLY USED CACHE 💰
 
-A `Least Recently Used Cache`, or `LRU Cache`,
+A `Least Recently Used Cache`, or `LRU Cache`, allows the storage of data where a record is kept of when
+the data was last touched.
 
 ## TABLE OF CONTENTS
 
@@ -16,7 +17,7 @@ A `Least Recently Used Cache`, or `LRU Cache`,
 
 ## TYPE
 
-An `LRU Cache` is a type of cache. Caches allow us to preserve and memoize data so that we can access it quickly in the future.
+A `LRU Cache` is a type of cache. Caches allow us to preserve and memoize data so that we can access it quickly in the future.
 
 ## DATA STRUCTURE DESCRIPTION
 
