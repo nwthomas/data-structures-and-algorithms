@@ -97,6 +97,8 @@ class LRUCache:
         if value == self._front.get_value():
             return True
         current = self._front
+        if current == None:
+            return False
         while current._next and current.get_value() != value:
             current = current._next
         if current.get_value() == value:
@@ -116,6 +118,8 @@ class LRUCache:
         False otherwise
         """
         current = self._front
+        if current == None:
+            return False
         while current._next and current.get_value() != value:
             current = current._next
         if current.get_value() == value:
@@ -129,7 +133,7 @@ class LRUCache:
             elif current == self._back:
                 new_back = self._back._previous
                 current.delete()
-                self._back - new_back
+                self._back = new_back
             self._length -= 1
             return True
         else:

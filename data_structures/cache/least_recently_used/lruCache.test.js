@@ -38,7 +38,7 @@ describe('Least Recently Used Cache', () => {
 
       test('removes the reference to previous and next nodes when deleted', () => {
         const node = new Node('test');
-        node._next = new Node('nest');
+        node._next = new Node('next');
         node._previous = new Node('test');
         node.delete();
         expect(node._next).toBeNull();

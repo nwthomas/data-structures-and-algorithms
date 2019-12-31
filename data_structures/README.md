@@ -8,6 +8,7 @@ These data structures are key interview topic for a reason - They are used all o
 
 <!-- prettier-ignore -->
 - [Cache](cache)
+  - [Least Recently Used](cache/least_recently_used)
   - [Ring Buffer](cache/ring_buffer)
 - [Linked List](linked_list)
   - [Singly-Linked List](linked_list/singly_linked_list)
