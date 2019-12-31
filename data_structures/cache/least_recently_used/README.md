@@ -1,7 +1,6 @@
-# LEAST RECENTLY USED CACHE 💰
+# LEAST RECENTLY USED CACHE 🧞‍♂️
 
-A `Least Recently Used Cache`, or `LRU Cache`, allows the storage of data where a record is kept of when
-the data was last touched.
+A `Least Recently Used Cache`, or `LRU Cache`, prioritizes the placement of data based on when it was last used. Most recently added or accessed data is placed in the front of the cache, and old data is deleted once the max size of the cache has been reached.
 
 ## TABLE OF CONTENTS
 
@@ -17,8 +16,14 @@ the data was last touched.
 
 ## TYPE
 
-A `LRU Cache` is a type of cache. Caches allow us to preserve and memoize data so that we can access it quickly in the future.
+A `LRU Cache`, is part of the cache data structure family. Caches allow us to preserve and memoize data so that we can access it quickly in the future.
 
 ## DATA STRUCTURE DESCRIPTION
 
+While implementations may vary, the typical `LRU Cache` always stores data in a fashion that marks recently used or added data at the "front" or "higher priority" than the other values.
+
 ## SPACE AND TIME COMPLEXITY
+
+My implementation utilizes a linked list under the hood, and so it has a time complexity of `O(n)` for searches and `O(1)` for additions/deletions from front and end of the cache.
+
+The space complexity is `O(n)` based on the amount of information stored.
