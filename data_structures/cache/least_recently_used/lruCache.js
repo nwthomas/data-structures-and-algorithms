@@ -75,7 +75,7 @@ class LRUCache {
      * Adds a new value to the cache, placing it in the front (or
      * most recently used) position
      *
-     * If the max length of the cache has been reached, the tail
+     * If the max length of the cache has been reached, the back
      * (or least recently used) value will be removed from the
      * cache
      */
