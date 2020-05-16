@@ -6,7 +6,6 @@ These data structures are key interview topic for a reason - They are used all o
 
 ## TABLE OF CONTENTS
 
-<!-- prettier-ignore -->
 - [Cache](cache)
   - [Least Recently Used](cache/least_recently_used)
   - [Ring Buffer](cache/ring_buffer)
