@@ -28,6 +28,11 @@ This repository is my personal collection of data structures and algorithms writ
   - [Cache](data_structures/cache)
     - [Least Recently Used](data_structures/cache/least_recently_used)
     - [Ring Buffer](data_structures/cache/ring_buffer)
+  - [Graph](graph) 🚧 Under Construction 🚧
+    - [Directed](graph/directed)
+      - [Acyclic](graph/directed/acyclic)
+      - [Cyclic](graph/directed/cyclic)
+    - [Undirected](graph/undirected)
   - [Linked List](data_structures/linked_list)
     - [Singly-Linked List](data_structures/linked_list/singly_linked_list)
     - [Doubly-Linked List](data_structures/linked_list/doubly_linked_list)
