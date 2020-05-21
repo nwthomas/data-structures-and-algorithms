@@ -8,6 +8,7 @@ This repository is my personal collection of data structures and algorithms writ
 
 ## TABLE OF CONTENTS
 
+<!-- prettier-ignore -->
 - [Big O Complexity](#big-o-complexity)
 - [What is an Algorithm?](#what-is-an-algorithm)
 - [What is a Data Structure?](#what-is-a-data-structure)
@@ -28,10 +29,6 @@ This repository is my personal collection of data structures and algorithms writ
     - [Least Recently Used](data_structures/cache/least_recently_used)
     - [Ring Buffer](data_structures/cache/ring_buffer)
   - [Graph](data_structures/graph) 🚧 Under Construction 🚧
-    - [Directed](data_structures/graph/directed)
-      - [Acyclic](data_structures/graph/directed/acyclic)
-      - [Cyclic](data_structures/graph/directed/cyclic)
-    - [Undirected](data_structures/graph/undirected)
   - [Linked List](data_structures/linked_list)
     - [Singly-Linked List](data_structures/linked_list/singly_linked_list)
     - [Doubly-Linked List](data_structures/linked_list/doubly_linked_list)
