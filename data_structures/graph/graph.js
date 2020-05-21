@@ -5,22 +5,23 @@ class Graph {
     this.length = 0;
   }
 
-  get length() {
-    /**
-     * Returns the current length (e.g. number of Nodes) of the Graph
-     */
-    return this.length;
-  }
-
-  addNodes = (value) => {
+  addNode(value) {
     /**
      * Adds a new value to the Graph inside a Node class
      */
-    this.nodes.push(new Node(value));
-    this.length++;
-  };
+    const addValue = (value) => {
+      this.nodes.push(new Node(value));
+      this.length++;
+    };
 
-  removeNode = (value) => {
+    if (Array.isArray(value)) {
+      value.forEach(addValue);
+    } else {
+      addValue(value);
+    }
+  }
+
+  removeNode(value) {
     /**
      * Removes a value and its Node from the Graph and removes any corresponding edges that
      * connect it to another Node in the Graph
@@ -30,16 +31,16 @@ class Graph {
       node.edges.filter((node) => node.value !== value);
     });
     this.length--;
-  };
+  }
 
-  getNode = (value) => {
+  getNode(value) {
     /**
      * Returns an array with any and all Nodes found that satisfy the value parameter
      */
     return this.nodes.filter((node) => node.value === value);
-  };
+  }
 
-  addEdge = (value1, value2) => {
+  addEdge(value1, value2) {
     /**
      * Adds an edge from the Node containing value1 to the Node containing value 2
      */
@@ -51,7 +52,7 @@ class Graph {
     if (this.isUndirected) {
       node2.edges.push(node1);
     }
-  };
+  }
 }
 
 class Node {

@@ -8,7 +8,6 @@ This repository is my personal collection of data structures and algorithms writ
 
 ## TABLE OF CONTENTS
 
-<!-- prettier-ignore -->
 - [Big O Complexity](#big-o-complexity)
 - [What is an Algorithm?](#what-is-an-algorithm)
 - [What is a Data Structure?](#what-is-a-data-structure)
