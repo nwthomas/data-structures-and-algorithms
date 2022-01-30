@@ -36,6 +36,7 @@ This repository is my personal collection of data structures and algorithms writ
   - [Stack](data_structures/stack)
   - [Tree](data_structures/tree)
     - [Binary Search Tree](data_structures/tree/binary_search_tree)
+    - [Depth-First Search](data_structures/tree/breadth_first_search)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 
