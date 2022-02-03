@@ -1,17 +1,5 @@
 /*
 
-A Breadth-First Search looks through any tree for a specific value in a lateral
-manner.
-
-In other words, for a tree of:
-
-             10
-          2     15
-        1   5      20
-
-The searching order would be:
-
-10 -> 2 -> 15 -> 1 -> 5 -> 20
 
 */
 
@@ -29,6 +17,7 @@ class BinarySearchTree {
      */
     let current = this;
     let traverseNodes = true;
+
     while (traverseNodes) {
       if (current.value > value && current.left) {
         current = current.left;
@@ -44,25 +33,32 @@ class BinarySearchTree {
     }
   }
 
-  breadthFirstSearch(searchValue) {
+  depthFirstSearchPreOrder(searchValue) {
     /**
-     * Traverses the BST to find a value in a breadth first search
+     * Searches through a tree in a depth first search order with
+     * the caveat of using a pre-order pattern
      */
-    const queue = [this];
+    const firstQueue = [this];
+    const secondQueue = [];
 
-    while (queue.length) {
-      const currentNode = queue.shift();
+    while (firstQueue.length || secondQueue.length) {
+      let currentNode;
+      if (firstQueue.length) {
+        currentNode = firstQueue.pop();
+      } else {
+        currentNode = secondQueue.pop();
+      }
 
       if (currentNode.value === searchValue) {
         return currentNode;
       }
 
       if (currentNode.left) {
-        queue.push(currentNode.left);
+        firstQueue.push(currentNode.left);
       }
 
       if (currentNode.right) {
-        queue.push(currentNode.right);
+        secondQueue.push(currentNode.right);
       }
     }
   }
