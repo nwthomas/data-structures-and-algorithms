@@ -1,5 +1,8 @@
 /*
 
+This searching process searching in a depth-first search pre-order pattern across a tree data structure.
+
+This means that the search will go deep on the set of nodes traversing down the lefthand side on each tree branch until hitting a dead end. It will then backtrack to the last right node point on the branch and search down, repeating this pattern until the entire tree has been searched.
 
 */
 

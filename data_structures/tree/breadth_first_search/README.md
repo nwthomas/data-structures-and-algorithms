@@ -1,11 +1,10 @@
 # BREADTH FIRST SEARCH 😳
 
-This searching process searching laterally across a `tree` data structure. 
+This searching process searching laterally across a `tree` data structure.
 
 ## TABLE OF CONTENTS
 
-- [BREADTH FIRST SEARCH 😳](#breadth-first-search-)
-  - [TABLE OF CONTENTS](#table-of-contents)
+- [TABLE OF CONTENTS](#table-of-contents)
   - [IMPLEMENTATIONS](#implementations)
   - [TYPE](#type)
   - [DATA STRUCTURE DESCRIPTION](#data-structure-description)
@@ -25,4 +24,4 @@ See above [Type](#type) section.
 
 ## SPACE AND TIME COMPLEXITY
 
-The runtime complexity for a depth-first search algorithm is `O(n)` where `n = number of nodes`. The space complexity can vary depending on needs, but could potentially be `O(n)` where `n = number of nodes`.
+The runtime complexity for a breadth-first search algorithm is `O(n)` where `n = number of nodes`. The space complexity can vary depending on needs, but could potentially be `O(n)` where `n = number of nodes`.
