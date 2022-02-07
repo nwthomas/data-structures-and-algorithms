@@ -2,22 +2,28 @@ const BSTWithDFSPreOrder = require('./depthFirstSearchPreOrder.js');
 
 describe('Breadth First Search', () => {
   let bst;
+  let originalConsoleLog;
+  let testConsoleLog;
 
   beforeEach(() => {
     bst = new BSTWithDFSPreOrder(10);
+    originalConsoleLog = console.log;
+    testConsoleLog = jest.fn();
+    console.log = testConsoleLog;
 
     [5, 18, 123, 8, 3, 10, 9, 4].forEach((num) => {
       bst.insert(num);
     });
   });
 
-  it('finds a node and returns it if it exists', () => {
-    const result = bst.depthFirstSearchPreOrder(123);
-    expect(result.value).toBe(123);
+  afterEach(() => {
+    console.log = originalConsoleLog;
   });
 
-  it('returns undefined if the value does not exist', () => {
-    const result = bst.depthFirstSearchPreOrder(1000000);
-    expect(result).toBeUndefined();
+  it('finds a node and returns it if it exists', () => {
+    bst.depthFirstSearchPreOrder();
+    expect(testConsoleLog).toHaveBeenCalledWith([
+      10, 5, 3, 4, 8, 9, 18, 10, 123,
+    ]);
   });
 });

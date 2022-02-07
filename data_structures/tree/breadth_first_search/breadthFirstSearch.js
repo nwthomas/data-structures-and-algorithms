@@ -44,18 +44,16 @@ class BinarySearchTree {
     }
   }
 
-  breadthFirstSearch(searchValue) {
+  breadthFirstSearch() {
     /**
      * Traverses the BST to find a value in a breadth first search
      */
     const queue = [this];
+    const visited = [];
 
     while (queue.length) {
       const currentNode = queue.shift();
-
-      if (currentNode.value === searchValue) {
-        return currentNode;
-      }
+      visited.push(currentNode.value);
 
       if (currentNode.left) {
         queue.push(currentNode.left);
@@ -65,6 +63,8 @@ class BinarySearchTree {
         queue.push(currentNode.right);
       }
     }
+
+    console.log(visited);
   }
 }
 

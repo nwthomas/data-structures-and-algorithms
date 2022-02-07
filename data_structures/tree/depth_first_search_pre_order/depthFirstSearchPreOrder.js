@@ -36,13 +36,14 @@ class BinarySearchTree {
     }
   }
 
-  depthFirstSearchPreOrder(searchValue) {
+  depthFirstSearchPreOrder() {
     /**
      * Searches through a tree in a depth first search order with
      * the caveat of using a pre-order pattern
      */
     const firstQueue = [this];
     const secondQueue = [];
+    const visited = [];
 
     while (firstQueue.length || secondQueue.length) {
       let currentNode;
@@ -52,9 +53,7 @@ class BinarySearchTree {
         currentNode = secondQueue.pop();
       }
 
-      if (currentNode.value === searchValue) {
-        return currentNode;
-      }
+      visited.push(currentNode.value);
 
       if (currentNode.left) {
         firstQueue.push(currentNode.left);
@@ -64,6 +63,8 @@ class BinarySearchTree {
         secondQueue.push(currentNode.right);
       }
     }
+
+    console.log(visited);
   }
 }
 
