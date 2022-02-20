@@ -1,6 +1,6 @@
 const BSTWithDFSPreOrder = require('./depthFirstSearchPreOrder.js');
 
-describe('Breadth First Search', () => {
+describe('Depth-First Pre-Order Search', () => {
   let bst;
   let originalConsoleLog;
   let testConsoleLog;
@@ -20,7 +20,7 @@ describe('Breadth First Search', () => {
     console.log = originalConsoleLog;
   });
 
-  it('finds a node and returns it if it exists', () => {
+  it('searches the tree in the correct order', () => {
     bst.depthFirstSearchPreOrder();
     expect(testConsoleLog).toHaveBeenCalledWith([
       10, 5, 3, 4, 8, 9, 18, 10, 123,

@@ -1,12 +1,12 @@
-const BSTWithBFS = require('./breadthFirstSearch.js');
+const BSTWithDFSPostOrder = require('./depthFirstSearchPostOrder.js');
 
-describe('Breadth First Search', () => {
+describe('Depth-First Post-Order Search', () => {
   let bst;
   let originalConsoleLog;
   let testConsoleLog;
 
   beforeEach(() => {
-    bst = new BSTWithBFS(10);
+    bst = new BSTWithDFSPostOrder(10);
     originalConsoleLog = console.log;
     testConsoleLog = jest.fn();
     console.log = testConsoleLog;
@@ -21,9 +21,9 @@ describe('Breadth First Search', () => {
   });
 
   it('searches the tree in the correct order', () => {
-    bst.breadthFirstSearch();
+    bst.depthFirstSearchPostOrder();
     expect(testConsoleLog).toHaveBeenCalledWith([
-      10, 5, 18, 3, 8, 10, 123, 4, 9,
+      4, 3, 9, 8, 5, 10, 123, 18, 10,
     ]);
   });
 });
