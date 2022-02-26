@@ -1,6 +1,6 @@
 /*
 
-This searches through a tree data structure in a depth-first search post-order manner.
+This searches through a tree data structure in a depth-first search in-order manner.
 
 */
 
@@ -34,17 +34,17 @@ class BinarySearchTree {
     }
   }
 
-  depthFirstSearchPostOrder() {
+  depthFirstSearchInOrder() {
     /**
      * Searches through a tree in a depth first search order with
-     * the caveat of using a post-order pattern
+     * the caveat of using an in-order pattern
      */
     const visited = [];
 
     function traverse(node) {
       if (node.left) traverse(node.left);
-      if (node.right) traverse(node.right);
       visited.push(node.value);
+      if (node.right) traverse(node.right);
     }
 
     traverse(this);
