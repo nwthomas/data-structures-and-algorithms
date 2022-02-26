@@ -19,4 +19,5 @@ These data structures are key interview topic for a reason - They are used all o
   - [Binary Search Tree](tree/binary_search_tree)
     - [Breadth-First Search](tree/breadth_first_search)
     - [Depth-First Search Pre-Order](tree/depth_first_search_pre_order)
-    - [Depth-First Search Post-Order](tree/depth_first_search_post_order/)
+    - [Depth-First Search Post-Order](tree/depth_first_search_post_order)
+    - [Depth-First Search In-Order](tree/depth_first_search_in_order)

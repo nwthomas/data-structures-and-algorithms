@@ -38,7 +38,8 @@ This repository is my personal collection of data structures and algorithms writ
     - [Binary Search Tree](data_structures/tree/binary_search_tree)
       - [Breadth-First Search](tree/breadth_first_search)
       - [Depth-First Search Pre-Order](data_structures/tree/depth_first_search_pre_order)
-      - [Depth-First Search Post-Order](data_structures/tree/depth_first_search_post_order/)
+      - [Depth-First Search Post-Order](data_structures/tree/depth_first_search_post_order)
+      - [Depth-First Seach In-Order](data_structures/tree/depth_first_search_in_order)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 
