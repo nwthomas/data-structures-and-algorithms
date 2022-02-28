@@ -29,6 +29,8 @@ This repository is my personal collection of data structures and algorithms writ
     - [Least Recently Used](data_structures/cache/least_recently_used)
     - [Ring Buffer](data_structures/cache/ring_buffer)
   - [Graph](data_structures/graph) 🚧 Under Construction 🚧
+  - [Heap](data_structures/heap) 🚧 Under Construction 🚧
+    - [Binary Heap](data_structures/heap/binary_heap)
   - [Linked List](data_structures/linked_list)
     - [Singly-Linked List](data_structures/linked_list/singly_linked_list)
     - [Doubly-Linked List](data_structures/linked_list/doubly_linked_list)
