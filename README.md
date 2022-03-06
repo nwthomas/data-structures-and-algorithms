@@ -29,6 +29,7 @@ This repository is my personal collection of data structures and algorithms writ
     - [Least Recently Used](data_structures/cache/least_recently_used)
     - [Ring Buffer](data_structures/cache/ring_buffer)
   - [Graph](data_structures/graph) 🚧 Under Construction 🚧
+  - [Hash Tables](hash_tables) 🚧 Under Construction 🚧
   - [Heap](data_structures/heap)
     - [Max Binary Heap](data_structures/heap/max_binary_heap)
     - [Priority Queue](data_structures/heap/priority_queue)
