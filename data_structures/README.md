@@ -10,7 +10,8 @@ These data structures are key interview topic for a reason - They are used all o
   - [Least Recently Used](cache/least_recently_used)
   - [Ring Buffer](cache/ring_buffer)
 - [Graph](graph) 🚧 Under Construction 🚧
-- [Heap](heap) 🚧 Under Construction 🚧
+- [Heap](heap)
+  - [Max Binary Heap](data_structures/heap/max_binary_heap)
 - [Linked List](linked_list)
   - [Singly-Linked List](linked_list/singly_linked_list)
   - [Doubly-Linked List](linked_list/doubly_linked_list)
