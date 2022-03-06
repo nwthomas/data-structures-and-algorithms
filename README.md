@@ -31,6 +31,7 @@ This repository is my personal collection of data structures and algorithms writ
   - [Graph](data_structures/graph) 🚧 Under Construction 🚧
   - [Heap](data_structures/heap)
     - [Max Binary Heap](data_structures/heap/max_binary_heap)
+    - [Priority Queue](data_structures/heap/priority_queue)
   - [Linked List](data_structures/linked_list)
     - [Singly-Linked List](data_structures/linked_list/singly_linked_list)
     - [Doubly-Linked List](data_structures/linked_list/doubly_linked_list)

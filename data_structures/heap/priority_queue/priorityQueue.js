@@ -14,7 +14,7 @@ const PRIORITY_HIGH = 2;
 const PRIORITY_MEDIUM = 1;
 const PRIORITY_LOW = 0;
 
-class MaxPriorityQueue {
+class PriorityQueue {
   static priorityHigh = PRIORITY_HIGH;
   static priorityMedium = PRIORITY_MEDIUM;
   static priorityLow = PRIORITY_LOW;
@@ -153,4 +153,4 @@ class MaxPriorityQueue {
   }
 }
 
-module.exports = MaxPriorityQueue;
+module.exports = PriorityQueue;

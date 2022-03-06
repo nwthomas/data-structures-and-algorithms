@@ -11,7 +11,8 @@ These data structures are key interview topic for a reason - They are used all o
   - [Ring Buffer](cache/ring_buffer)
 - [Graph](graph) 🚧 Under Construction 🚧
 - [Heap](heap)
-  - [Max Binary Heap](data_structures/heap/max_binary_heap)
+  - [Max Binary Heap](heap/max_binary_heap)
+  - [Priority Queue](heap/priority_queue)
 - [Linked List](linked_list)
   - [Singly-Linked List](linked_list/singly_linked_list)
   - [Doubly-Linked List](linked_list/doubly_linked_list)
