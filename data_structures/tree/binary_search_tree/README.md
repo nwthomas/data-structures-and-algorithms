@@ -24,7 +24,7 @@ A `Binary Search Tree` is a `tree` data structure. It encorporates `nodes` that 
 
 A `Binary Search Tree` is a specialized `tree` data structure. It uses a modified linked list under the hood; unlike a typical `linked list`, its links go `left` and `right`. This is because we are building out a descending, broadening `tree` (in the inverse, actually) that assigns values based on whether or not the current value is lesser or greater than the value of the current `node` we're looking at.
 
-Because we can quickly descend a `Binary Search Tree` and also quickly lookup data, this data structure is quite fast for insertion and lookup times (see below). d
+Because we can quickly descend a `Binary Search Tree` and also quickly lookup data, this data structure is quite fast for insertion and lookup times (see below).
 
 ## SPACE AND TIME COMPLEXITY
 
