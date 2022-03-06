@@ -15,12 +15,11 @@ const PRIORITY_MEDIUM = 1;
 const PRIORITY_LOW = 0;
 
 class PriorityQueue {
-  static priorityHigh = PRIORITY_HIGH;
-  static priorityMedium = PRIORITY_MEDIUM;
-  static priorityLow = PRIORITY_LOW;
-
   constructor() {
     this.queue = [];
+    this.priorityHigh = PRIORITY_HIGH;
+    this.priorityMedium = PRIORITY_MEDIUM;
+    this.priorityLow = PRIORITY_LOW;
   }
 
   /**
