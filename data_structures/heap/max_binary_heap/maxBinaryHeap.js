@@ -18,6 +18,12 @@ class MaxBinaryHeap {
   }
 
   remove() {
+    if (this.values.length <= 1) {
+      const value = this.values[0];
+      this.values = [];
+      return value;
+    }
+
     const lastIndex = this.values.length - 1;
     this._swapValues(0, lastIndex);
 
