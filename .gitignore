@@ -95,3 +95,4 @@ __pycache__/
 
 # Temporary changes for WIPs
 /data_structures/tree/avl_tree/
+/data_structures/hash_tables
