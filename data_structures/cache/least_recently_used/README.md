@@ -11,7 +11,6 @@ A `Least Recently Used Cache`, or `LRU Cache`, prioritizes the placement of data
 
 ## IMPLEMENTATIONS
 
-- [JavaScript](lruCache.js)
 - [Python](lru_cache.py)
 
 ## TYPE
