@@ -115,5 +115,53 @@ class TestLRUCache(unittest.TestCase):
         accessed_value = cache.get("100")
         self.assertEqual(accessed_value, -1)
 
+    def test_returns_value_if_deleted(self):
+        """Returns the value if the node is deleted successfully"""
+        cache = LRUCache(1000)
+        cache.put("100", 100)
+        cache.put("4", 4)
+        cache.put("7", 7)
+
+        deleted_value = cache.delete("100")
+        self.assertEqual(deleted_value, 100)
+
+        tail_value = cache.tail.value
+        self.assertEqual(tail_value, 4)
+
+    def test_returns_negative_one_if_not_deleted(self):
+        """Returns -1 if the value does not exist and cannot be deleted"""
+        cache = LRUCache(1000)
+        
+        deleted_value = cache.delete("5")
+        self.assertEqual(deleted_value, -1)
+
+    def test_delete_updates_length(self):
+        """Updates the correct length of the cache on delete of value"""
+        cache = LRUCache(10)
+        cache.put("1", 1)
+
+        before_delete_length = cache.length
+        self.assertEqual(before_delete_length, 1)
+
+        cache.delete("1")
+
+        after_delete_length = cache.length
+        self.assertEqual(after_delete_length, 0)
+
+    def test_sets_new_tail_and_head_correctly_if_length_one(self):
+        """Sets new tail correctly when deleting tail"""
+        cache = LRUCache(10)
+        cache.put("1", 1)
+        cache.put("4", 4)
+
+        deleted_value = cache.delete("1")
+        self.assertEqual(deleted_value, 1)
+
+        head_value = cache.head.value
+        self.assertEqual(head_value, 4)
+
+        tail_value = cache.tail.value
+        self.assertEqual(tail_value, 4)
+
 if __name__ == "__main__":
     unittest.main()

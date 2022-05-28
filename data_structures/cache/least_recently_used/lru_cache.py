@@ -63,6 +63,31 @@ class LRUCache:
                 self.tail.next = None
                 del self.cache[deleted_node.key]
                 self.length -= 1
+
+    def delete(self, key: int) -> int:
+        if not key in self.cache:
+            return -1
+
+        deleted_node = self.cache[key]
+        prev_node = deleted_node.prev
+        next_node = deleted_node.next
+
+        if prev_node:
+            prev_node.next = next_node
+        if next_node:
+            next_node.prev = prev_node
+
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+        elif self.head == deleted_node:
+            self.head = next_node
+        elif self.tail == deleted_node:
+            self.tail = prev_node
+
+        self.length -= 1
+
+        return deleted_node.value
         
 class Node:
     def __init__(self, value = None, key = None, next_node = None, prev_node = None):

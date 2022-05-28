@@ -24,6 +24,6 @@ While implementations may vary, the typical `LRU Cache` always stores data in a 
 
 ## SPACE AND TIME COMPLEXITY
 
-My implementation utilizes a linked list under the hood, and so it has a time complexity of `O(n)` for searches and `O(1)` for additions/deletions from front and end of the cache.
+My implementation utilizes a linked list under the hood with references stored by key, and so it has a time complexity of `O(1)` for searches and `O(1)` for additions and deletions.
 
 The space complexity is `O(n)` based on the amount of information stored.
