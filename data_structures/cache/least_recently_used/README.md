@@ -4,14 +4,15 @@ A `Least Recently Used Cache`, or `LRU Cache`, prioritizes the placement of data
 
 ## TABLE OF CONTENTS
 
-- [Implementations](#implementations)
-- [Type](#type)
-- [Data Structure Description](#data-structure-description)
-- [Space and Time Complexity](#space-and-time-complexity)
+-   [Implementations](#implementations)
+-   [Type](#type)
+-   [Data Structure Description](#data-structure-description)
+-   [Space and Time Complexity](#space-and-time-complexity)
 
 ## IMPLEMENTATIONS
 
-- [Python](lru_cache.py)
+-   [JavaScript](lruCache.js)
+-   [Python](lru_cache.py)
 
 ## TYPE
 

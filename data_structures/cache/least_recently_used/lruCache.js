@@ -104,7 +104,7 @@ LRUCache.prototype.delete = function del(key) {
     return deletedNode.value;
 };
 
-function Node(key, value, next = null, prev = null) {
+function Node(key = '', value = null, next = null, prev = null) {
     this.value = value;
     this.key = key;
     this.next = next;
