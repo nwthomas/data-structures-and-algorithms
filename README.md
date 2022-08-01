@@ -42,7 +42,7 @@ This repository is a collection of data structures and algorithms implemented in
       - [Depth-First Search Pre-Order](data_structures/tree/depth_first_search_pre_order)
       - [Depth-First Search Post-Order](data_structures/tree/depth_first_search_post_order)
       - [Depth-First Seach In-Order](data_structures/tree/depth_first_search_in_order)
-  - [Trie](data_structures/trie) 🚧 Under Construction 🚧
+  - [Trie](data_structures/trie)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 

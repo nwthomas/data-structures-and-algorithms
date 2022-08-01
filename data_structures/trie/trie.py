@@ -71,6 +71,7 @@ class Trie:
         return False
 
     def update(self, old_word: str, new_word: str) -> None:
+        """Updates an old word to a new word in as efficient a process as possible"""
         if not self.search(old_word):
             return
 
