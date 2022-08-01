@@ -44,6 +44,7 @@ This repository is my personal collection of data structures and algorithms writ
       - [Depth-First Search Pre-Order](data_structures/tree/depth_first_search_pre_order)
       - [Depth-First Search Post-Order](data_structures/tree/depth_first_search_post_order)
       - [Depth-First Seach In-Order](data_structures/tree/depth_first_search_in_order)
+  - [Trie](data_structures/trie) 🚧 Under Construction 🚧
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 
@@ -83,15 +84,15 @@ A [data structure](https://en.wikipedia.org/wiki/Data_structure) "allows data or
 
 ## Author
 
-- [**Nathan Thomas**](https://github.com/nwthomas)
+-   [**Nathan Thomas**](https://github.com/nwthomas)
 
 ## ACKNOWLEDGEMENTS
 
-- Thanks [Beej Jorgenson](https://github.com/beejjorgensen) for being a _boss_ of a computer science instructor at [Lambda School](https://lambdaschool.com/). You make things simple, easy, and understandable. That's the highest praise I could ever give someone teaching a complicated topic like CS.
-- Thank you to [Brad Fukumoto](https://github.com/br80). You're so knowledgeable, but you're also super approachable as a teacher; your passion for teaching shines through. Also, you have _boss_-level hobbies.
-- To [Sean Chen](https://github.com/seanchen1991), your skills are honestly off-the-rails. I have learned so much from watching you work. Thank you!
-- To [Brian Doyle](https://github.com/briandoyle81), thanks for being a friendly and knowledgeable CS instructor. You came in at the hardest point of CS and somehow made it great. Thank you!
-- Huge thanks to [Byron Homes](https://github.com/byronholmes2018) for getting me excited about data structures and algorithms. You're awesome and a genius.
-- Thanks to [Frank Faustino](https://github.com/frankfaustino) for inspiring me to create, build, and make my own data structures and algorithms repository. Your own journey has inspired my own.
-- Thanks to Aditya Bhargava, the author of [Grokking Algorithms](https://smile.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230/ref=sr_1_2?ie=UTF8&qid=1544921791&sr=8-2&keywords=grokking+algorithm). You inspired me to learn this stuff and start documenting it for ease of later use.
-- Thanks to [bigocheatsheet.com](https://www.bigocheatsheet.com/) for your useful descriptions of Big O Notation and graphs that I have used in this `README`.
+-   Thanks [Beej Jorgenson](https://github.com/beejjorgensen) for being a _boss_ of a computer science instructor at [Lambda School](https://lambdaschool.com/). You make things simple, easy, and understandable. That's the highest praise I could ever give someone teaching a complicated topic like CS.
+-   Thank you to [Brad Fukumoto](https://github.com/br80). You're so knowledgeable, but you're also super approachable as a teacher; your passion for teaching shines through. Also, you have _boss_-level hobbies.
+-   To [Sean Chen](https://github.com/seanchen1991), your skills are honestly off-the-rails. I have learned so much from watching you work. Thank you!
+-   To [Brian Doyle](https://github.com/briandoyle81), thanks for being a friendly and knowledgeable CS instructor. You came in at the hardest point of CS and somehow made it great. Thank you!
+-   Huge thanks to [Byron Homes](https://github.com/byronholmes2018) for getting me excited about data structures and algorithms. You're awesome and a genius.
+-   Thanks to [Frank Faustino](https://github.com/frankfaustino) for inspiring me to create, build, and make my own data structures and algorithms repository. Your own journey has inspired my own.
+-   Thanks to Aditya Bhargava, the author of [Grokking Algorithms](https://smile.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230/ref=sr_1_2?ie=UTF8&qid=1544921791&sr=8-2&keywords=grokking+algorithm). You inspired me to learn this stuff and start documenting it for ease of later use.
+-   Thanks to [bigocheatsheet.com](https://www.bigocheatsheet.com/) for your useful descriptions of Big O Notation and graphs that I have used in this `README`.

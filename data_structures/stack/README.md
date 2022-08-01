@@ -7,15 +7,15 @@ data to the top of the `Stack` and popping data off the top of the `Stack`.
 
 ## TABLE OF CONTENTS
 
-- [Implementations](#implementations)
-- [Type](#type)
-- [Data Structure Description](#data-structure-description)
-- [Space and Time Complexity](#space-and-time-complexity)
+-   [Implementations](#implementations)
+-   [Type](#type)
+-   [Data Structure Description](#data-structure-description)
+-   [Space and Time Complexity](#space-and-time-complexity)
 
 ## IMPLEMENTATIONS
 
-- [JavaScript](stack.js)
-- [Python](stack.py)
+-   [JavaScript](stack.js)
+-   [Python](stack.py)
 
 ## TYPE
 

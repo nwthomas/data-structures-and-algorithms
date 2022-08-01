@@ -6,22 +6,23 @@ These data structures are key interview topic for a reason - They are used all o
 
 ## TABLE OF CONTENTS
 
-- [Cache](cache)
-  - [Least Recently Used](cache/least_recently_used)
-  - [Ring Buffer](cache/ring_buffer)
-- [Graph](graph) 🚧 Under Construction 🚧
-- [Hash Tables](hash_tables) 🚧 Under Construction 🚧
-- [Heap](heap)
-  - [Max Binary Heap](heap/max_binary_heap)
-  - [Priority Queue](heap/priority_queue)
-- [Linked List](linked_list)
-  - [Singly-Linked List](linked_list/singly_linked_list)
-  - [Doubly-Linked List](linked_list/doubly_linked_list)
-- [Queue](queue)
-- [Stack](stack)
-- [Tree](tree)
-  - [Binary Search Tree](tree/binary_search_tree)
-    - [Breadth-First Search](tree/breadth_first_search)
-    - [Depth-First Search Pre-Order](tree/depth_first_search_pre_order)
-    - [Depth-First Search Post-Order](tree/depth_first_search_post_order)
-    - [Depth-First Search In-Order](tree/depth_first_search_in_order)
+-   [Cache](cache)
+    -   [Least Recently Used](cache/least_recently_used)
+    -   [Ring Buffer](cache/ring_buffer)
+-   [Graph](graph) 🚧 Under Construction 🚧
+-   [Hash Tables](hash_tables) 🚧 Under Construction 🚧
+-   [Heap](heap)
+    -   [Max Binary Heap](heap/max_binary_heap)
+    -   [Priority Queue](heap/priority_queue)
+-   [Linked List](linked_list)
+    -   [Singly-Linked List](linked_list/singly_linked_list)
+    -   [Doubly-Linked List](linked_list/doubly_linked_list)
+-   [Queue](queue)
+-   [Stack](stack)
+-   [Tree](tree)
+    -   [Binary Search Tree](tree/binary_search_tree)
+        -   [Breadth-First Search](tree/breadth_first_search)
+        -   [Depth-First Search Pre-Order](tree/depth_first_search_pre_order)
+        -   [Depth-First Search Post-Order](tree/depth_first_search_post_order)
+        -   [Depth-First Search In-Order](tree/depth_first_search_in_order)
+-   [Trie](trie)
