@@ -71,36 +71,49 @@ class Trie:
         return False
 
     def update(self, old_word: str, new_word: str) -> None:
-        if self.search(old_word):
+        if not self.search(old_word):
+            return
+
+        ending_similarity_index = -1
+
+        for char in new_word:
+            if ending_similarity_index + 1 < len(old_word) and char == old_word[ending_similarity_index + 1]:
+                ending_similarity_index += 1
+
+        if ending_similarity_index < 1:
             self.delete(old_word)
-            self.insert(new_word)
-            
-        # ending_similarity_index = -1
+        else:
+            current = self.root
+            word_index = 0
+            stack = [current]
 
-        # for char in new_word:
-        #     if ending_similarity_index + 1 < len(old_word) and char == old_word[ending_similarity_index + 1]:
-        #         ending_similarity_index += 1
+            while word_index < len(old_word):
+                if old_word[word_index] not in current.children:
+                    return
 
-        # if ending_similarity_index < 0:
-        #     self.delete(old_word)
-        # else:
-        #     current = self.root
-        #     word_index = 0
-        #     stack = [current]
+                current = current.children[old_word[word_index]]
+                stack.append(current)
+                word_index += 1
 
-        #     while word_index < len(new_word):
-        #         if new_word[word_index] not in current.children:
-        #             return
+            current.word_totals -= 1
 
-        #         current = current.children[new_word[word_index]]
-        #         stack.append(current)
-        #         word_index += 1
+            if len(dict.keys(current.children)) < 1:
+                stack.pop()
 
-        #     current.word_totals -= 1
+                while (
+                    current.word_totals == 0 and 
+                    len(dict.keys(current.children)) < 2 and 
+                    current != self.root and 
+                    word_index != ending_similarity_index
+                ):
+                    current.children = {}
+                    current = stack.pop()
+                    word_index -= 1
 
-        #     while 
+                if word_index < len(old_word):
+                    del current.children[old_word[word_index]]
 
-        # self.insert(new_word)
+        self.insert(new_word)
 
     def delete(self, word: str) -> None:
         """Deletes a word within the Trie while not removing any nodes used by other words"""

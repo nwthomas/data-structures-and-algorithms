@@ -1,10 +1,8 @@
-<h1 align="center"><img src="assets/readme_header.png" /></h1>
-<h4 align="center">A collection of data structures and algorithms implemented in Python and JavaScript.</h4>
-<br>
+# DATA STRUCTURES AND ALGORITHMS 🧮
 
 ## PURPOSE
 
-This repository is my personal collection of data structures and algorithms written in [Python](https://www.python.org/) and [JavaScript](https://www.ecma-international.org/). I will be updating this repository in the future to include interpretations of the algorithms in other languages.
+This repository is a collection of data structures and algorithms implemented in Python and JavaScript. It's my personal collection of data structures and algorithms written in [Python](https://www.python.org/) and [JavaScript](https://www.ecma-international.org/). I will be updating this repository in the future to include interpretations of the algorithms in other languages.
 
 ## TABLE OF CONTENTS
 
