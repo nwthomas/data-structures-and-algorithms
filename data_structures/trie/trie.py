@@ -65,3 +65,27 @@ class Trie:
                 stack.append(current.children[child])
         
         return False
+
+    def update(self, word: str) -> None:
+        pass
+
+    def delete(self, word: str) -> None:
+        current = self.root
+        word_index = 0
+        stack = [current]
+
+        while word_index < len(word):
+            if word[word_index] not in current.children:
+                return
+
+            current = current.children[word[word_index]]
+            stack.append(current)
+            word_index += 1
+
+        current.word_totals -= 1
+        stack.pop()
+
+        while current.word_totals == 0 and len(dict.keys(current.children)) <= 1:
+            current = stack.pop()
+
+        

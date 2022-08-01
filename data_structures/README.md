@@ -25,4 +25,4 @@ These data structures are key interview topic for a reason - They are used all o
         -   [Depth-First Search Pre-Order](tree/depth_first_search_pre_order)
         -   [Depth-First Search Post-Order](tree/depth_first_search_post_order)
         -   [Depth-First Search In-Order](tree/depth_first_search_in_order)
--   [Trie](trie)
+-   [Trie](trie) 🚧 Under Construction 🚧
