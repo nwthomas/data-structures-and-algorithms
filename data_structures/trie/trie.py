@@ -102,9 +102,9 @@ class Trie:
                 stack.pop()
 
                 while (
-                    current.word_totals == 0 and 
-                    len(dict.keys(current.children)) < 2 and 
-                    current != self.root and 
+                    current.word_totals == 0 and
+                    len(dict.keys(current.children)) < 2 and
+                    current != self.root and
                     word_index > ending_similarity_index
                 ):
                     current.children = {}
