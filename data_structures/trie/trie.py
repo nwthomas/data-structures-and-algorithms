@@ -14,9 +14,11 @@ class Node:
 
 class Trie:
     def __init__(self):
-       self.root = Node()
+        """Initializes a new Trie with a root node of value None"""
+        self.root = Node()
 
     def insert(self, word: str) -> None:
+        """Inserts a new value into the Trie and constructs nodes along the way if needed"""
         current = self.root
         word_index = 0
         
@@ -30,6 +32,7 @@ class Trie:
         current.word_totals += 1
 
     def search(self, word: str) -> bool:
+        """Searches for a given word in the Trie by traversing the Trie's nodes"""
         current = self.root
         word_index = 0
         
@@ -43,6 +46,7 @@ class Trie:
         return current.word_totals > 0
 
     def startsWith(self, prefix: str) -> bool:
+        """Detects if any word is contained in the Trie that starts with a given prefix"""
         current = self.root
         prefix_index = 0
         
@@ -66,10 +70,40 @@ class Trie:
         
         return False
 
-    def update(self, word: str) -> None:
-        pass
+    def update(self, old_word: str, new_word: str) -> None:
+        if self.search(old_word):
+            self.delete(old_word)
+            self.insert(new_word)
+            
+        # ending_similarity_index = -1
+
+        # for char in new_word:
+        #     if ending_similarity_index + 1 < len(old_word) and char == old_word[ending_similarity_index + 1]:
+        #         ending_similarity_index += 1
+
+        # if ending_similarity_index < 0:
+        #     self.delete(old_word)
+        # else:
+        #     current = self.root
+        #     word_index = 0
+        #     stack = [current]
+
+        #     while word_index < len(new_word):
+        #         if new_word[word_index] not in current.children:
+        #             return
+
+        #         current = current.children[new_word[word_index]]
+        #         stack.append(current)
+        #         word_index += 1
+
+        #     current.word_totals -= 1
+
+        #     while 
+
+        # self.insert(new_word)
 
     def delete(self, word: str) -> None:
+        """Deletes a word within the Trie while not removing any nodes used by other words"""
         current = self.root
         word_index = 0
         stack = [current]
@@ -83,9 +117,14 @@ class Trie:
             word_index += 1
 
         current.word_totals -= 1
-        stack.pop()
 
-        while current.word_totals == 0 and len(dict.keys(current.children)) <= 1:
-            current = stack.pop()
+        if len(dict.keys(current.children)) < 1:
+            stack.pop()
 
-        
+            while current.word_totals == 0 and len(dict.keys(current.children)) < 2 and current != self.root:
+                current.children = {}
+                current = stack.pop()
+                word_index -= 1
+
+            if word_index < len(word):
+                del current.children[word[word_index]]
