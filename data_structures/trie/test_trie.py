@@ -113,7 +113,7 @@ class TestTrie(unittest.TestCase):
         self.assertTrue(has_word)
 
     def test_deletes_up_to_root_but_not_including_root(self):
-        """Deletes nodes no longer needed up to and including root"""
+        """Deletes nodes no longer needed up-to-and-including root"""
         trie = Trie()
         trie.insert("remembrance")
 

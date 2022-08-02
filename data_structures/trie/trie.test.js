@@ -1,16 +1,20 @@
 const Trie = require('./trie.js');
 
 describe('Trie', () => {
+    let trie;
+
+    beforeEach(() => {
+        trie = new Trie();
+    });
+
     describe('instantiates', () => {
         it('instantiates a new Trie', () => {
-            const trie = new Trie();
             expect(trie instanceof Trie).toBe(true);
         });
     });
 
     describe('insert', () => {
         it('adds a new word to the Trie class', () => {
-            const trie = new Trie();
             trie.insert('testing');
             trie.insert('test');
 
@@ -29,7 +33,6 @@ describe('Trie', () => {
         });
 
         it('can add multiple of the same word and increment word totals value', () => {
-            const trie = new Trie();
             trie.insert('nate');
             trie.insert('nate');
 
@@ -39,7 +42,6 @@ describe('Trie', () => {
         });
 
         it('assigns a word total + 1 to the last character node in a word', () => {
-            const trie = new Trie();
             trie.insert('add');
 
             expect(trie.root.children.a.wordTotals).toBe(0);
@@ -52,7 +54,6 @@ describe('Trie', () => {
 
     describe('search', () => {
         it('can store a large word correctly', () => {
-            const trie = new Trie();
             trie.insert('supercalifragilisticexpialidocious');
 
             const hasWord = trie.search('supercalifragilisticexpialidocious');
@@ -60,7 +61,6 @@ describe('Trie', () => {
         });
 
         it('returns false if the only difference in stored word is case sensitivity', () => {
-            const trie = new Trie();
             trie.insert('Nathan');
 
             const hasWord = trie.search('nathan');
@@ -70,7 +70,6 @@ describe('Trie', () => {
 
     describe('startsWith', () => {
         it('returns true if any word with a prefix exists', () => {
-            const trie = new Trie();
             trie.insert('testing');
             trie.insert('testify');
 
@@ -82,7 +81,6 @@ describe('Trie', () => {
         });
 
         it('returns false if a long prefix does not have any words that exist in the Trie', () => {
-            const trie = new Trie();
             trie.insert('test');
             trie.insert('testing');
             trie.insert('tesla');
@@ -93,17 +91,91 @@ describe('Trie', () => {
         });
 
         it('returns false if a prefix search is done and no words are in Trie', () => {
-            const trie = new Trie();
             const hasAnyWord = trie.startsWith('test');
             expect(hasAnyWord).toBe(false);
         });
     });
 
     describe('update', () => {
-        // finish
+        it('takes in old and new words and removes old + adds new', () => {
+            trie.insert('testing');
+            trie.update('testing', 'testify');
+
+            let hasWord = trie.search('testing');
+            expect(hasWord).toBe(false);
+
+            hasWord = trie.search('testify');
+            expect(hasWord).toBe(true);
+        });
+
+        it('returns and does not modify Trie if old word is not found', () => {
+            trie.insert('test');
+
+            trie.update('telling', 'testing');
+
+            let hasWord = trie.search('telling');
+            expect(hasWord).toBe(false);
+
+            hasWord = trie.search('testing');
+            expect(hasWord).toBe(false);
+
+            hasWord = trie.search('test');
+            expect(hasWord).toBe(true);
+        });
     });
 
     describe('delete', () => {
-        // finish
+        it('deletes nodes no longer needed while keeping needed ones', () => {
+            trie.insert('test');
+            trie.insert('testing');
+            trie.insert('tesla');
+
+            let hasWord = trie.search('tesla');
+            expect(hasWord).toBe(true);
+
+            trie.delete('tesla');
+
+            hasWord = trie.search('tesla');
+            expect(hasWord).toBe(false);
+
+            hasWord = trie.search('test');
+            expect(hasWord).toBe(true);
+
+            hasWord = trie.search('testing');
+            expect(hasWord).toBe(true);
+        });
+
+        it('deletes nodes no longer needed up-to-and-including root', () => {
+            trie.insert('remembrance');
+
+            const hasWord = trie.search('remembrance');
+            expect(hasWord).toBe(true);
+
+            trie.delete('remembrance');
+            expect(trie.root.children).toEqual({});
+        });
+
+        it('deletes node from children at root', () => {
+            trie.insert('testing');
+            trie.insert('nathan');
+            trie.delete('testing');
+
+            const hasWord = trie.search('nathan');
+            expect(hasWord).toBe(true);
+            expect(Object.keys(trie.root.children).length).toBe(1);
+            expect(trie.root.children['n']).toBeTruthy();
+        });
+
+        it('stops deleting nodes if another word total encountered', () => {
+            trie.insert('Test');
+            trie.insert('Testing');
+            trie.delete('Testing');
+
+            let hasWord = trie.search('Test');
+            expect(hasWord).toBe(true);
+
+            hasWord = trie.search('Testing');
+            expect(hasWord).toBe(false);
+        });
     });
 });
