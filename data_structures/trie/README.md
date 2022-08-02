@@ -1,4 +1,4 @@
-# Trie 🌲
+# Trie 🌲🌲🌲
 
 A `Trie` is a unique data structure that operates a bit like a `Tree` but has a multitude of children for every single node. It is often used for the efficient storage and retrieval of keys in a dataset of strings.
 
@@ -13,7 +13,7 @@ A typeical `Trie` will have `insert`, `search`, `remove`, and `update` operation
 
 ## IMPLEMENTATIONS
 
--   JavaScript
+-   [JavaScript](trie.js)
 -   [Python](trie.py)
 
 ## TYPE

@@ -62,7 +62,7 @@ class TestTrie(unittest.TestCase):
         self.assertEqual(trie.root.children["a"].children["d"].children["d"].word_totals, 1)
 
     def test_returns_true_if_any_word_with_prefix_exists(self):
-        """Returns True if any word with a prefix """
+        """Returns True if any word with a prefix exists"""
         trie = Trie()
         trie.insert("testing")
         trie.insert("testify")

@@ -89,9 +89,6 @@ class Trie:
             stack = [current]
 
             while word_index < len(old_word):
-                if old_word[word_index] not in current.children:
-                    return
-
                 current = current.children[old_word[word_index]]
                 stack.append(current)
                 word_index += 1
