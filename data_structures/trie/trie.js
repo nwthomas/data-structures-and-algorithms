@@ -65,6 +65,43 @@ class Trie {
     }
 
     /**
+     * Searches for a given word including wildcard "." characters.
+     *
+     * @param {string} word The word to search for in the Trie. May include wildcard
+     * characters represented by "." which match any character.
+     * @returns {boolean} True if the word is found or false otherwise
+     */
+    searchWithUnknowns(word) {
+        function depthFirstSearch(index, root) {
+            let current = root;
+
+            for (let i = index; i < word.length; i++) {
+                const char = word[i];
+
+                if (char === '.') {
+                    for (const child in Object.values(current.children)) {
+                        if (depthFirstSearch(i + 1, child)) {
+                            return true;
+                        }
+
+                        return false;
+                    }
+                } else {
+                    if (!current.children[char]) {
+                        return false;
+                    }
+
+                    current = current.children[char];
+                }
+            }
+
+            return current.wordTotals > 0;
+        }
+
+        return depthFirstSearch(0, word);
+    }
+
+    /**
      * Detects if any word is contained in the Trie that starts with a given prefix
      *
      * @param {string} prefix The prefix to search with in the Trie

@@ -45,6 +45,27 @@ class Trie:
             
         return current.word_totals > 0
 
+    def searchWithUnknown(self, word: str) -> bool:
+        """Traverses the Trie and finds if a word exists including if unknown '.' characters are included"""
+
+        def dfs(j, root):
+            cur = root
+            
+            for i in range(j, len(word)):
+                c = word[i]
+                if c == ".":
+                    for child in cur.children.values():
+                        if dfs(i + 1, child):
+                            return True
+                    return False
+                else:
+                    if c not in cur.children:
+                        return False
+                    cur = cur.children[c]
+            return cur.word_totals > 0
+        
+        return dfs(0, self.root)
+
     def startsWith(self, prefix: str) -> bool:
         """Detects if any word is contained in the Trie that starts with a given prefix"""
         current = self.root
