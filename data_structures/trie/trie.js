@@ -79,7 +79,7 @@ class Trie {
                 const char = word[i];
 
                 if (char === '.') {
-                    for (const child in Object.values(current.children)) {
+                    for (const child of Object.values(current.children)) {
                         if (depthFirstSearch(i + 1, child)) {
                             return true;
                         }
@@ -98,7 +98,7 @@ class Trie {
             return current.wordTotals > 0;
         }
 
-        return depthFirstSearch(0, word);
+        return depthFirstSearch(0, this.root);
     }
 
     /**

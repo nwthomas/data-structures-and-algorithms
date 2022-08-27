@@ -68,6 +68,26 @@ describe('Trie', () => {
         });
     });
 
+    describe('searchWithWildcard', () => {
+        it('returns true if a word exists when searched for with wildcards', () => {
+            trie.insert('nathan');
+            trie.insert('nathaniel');
+            trie.insert('nate');
+
+            const hasWord = trie.searchWithWildcard('n..ha...l');
+            expect(hasWord).toBe(true);
+        });
+
+        it('returns false if a word does not exist when searched with wildcards', () => {
+            trie.insert('nathan');
+            trie.insert('nathaniel');
+            trie.insert('nate');
+
+            const hasWord = trie.searchWithWildcard('n.....n');
+            expect(hasWord).toBe(false);
+        });
+    });
+
     describe('startsWith', () => {
         it('returns true if any word with a prefix exists', () => {
             trie.insert('testing');
