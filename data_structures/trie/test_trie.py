@@ -177,5 +177,25 @@ class TestTrie(unittest.TestCase):
         has_word = trie.search("test")
         self.assertTrue(has_word)
 
+    def test_can_find_word_with_wildcards(self):
+        """Returns True if a word exists when searched for with wildcards"""
+        trie = Trie()
+        trie.insert("nathan")
+        trie.insert("nathaniel")
+        trie.insert("nate")
+
+        has_word = trie.searchWithWildcard("n..ha...l")
+        self.assertTrue(has_word)
+
+    def test_can_verify_no_word_exists_with_wildcard_search(self):
+        """Returns False if a word does not exist when searched for with wildcards"""
+        trie = Trie()
+        trie.insert("nathan")
+        trie.insert("nathaniel")
+        trie.insert("nate")
+
+        has_word = trie.searchWithWildcard("n......n")
+        self.assertFalse(has_word)
+
 if __name__ == "__main__":
     unittest.main()

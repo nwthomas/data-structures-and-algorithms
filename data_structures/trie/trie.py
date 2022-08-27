@@ -45,8 +45,8 @@ class Trie:
             
         return current.word_totals > 0
 
-    def searchWithUnknown(self, word: str) -> bool:
-        """Traverses the Trie and finds if a word exists including if unknown '.' characters are included"""
+    def searchWithWildcard(self, word: str) -> bool:
+        """Traverses the Trie and finds if a word exists including if wildcard '.' characters are included"""
 
         def dfs(j, root):
             cur = root

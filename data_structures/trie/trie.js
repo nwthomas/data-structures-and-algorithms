@@ -71,7 +71,7 @@ class Trie {
      * characters represented by "." which match any character.
      * @returns {boolean} True if the word is found or false otherwise
      */
-    searchWithUnknowns(word) {
+    searchWithWildcard(word) {
         function depthFirstSearch(index, root) {
             let current = root;
 
