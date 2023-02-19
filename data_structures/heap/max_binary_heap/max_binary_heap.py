@@ -10,11 +10,11 @@ class MaxBinaryHeap:
     def __init__(self):
         self.values = []
 
-    def insert(self, newValue: int) -> None:
+    def insert(self, newValue: int) -> int:
         """Inserts a new value into the heap"""
         self.values.append(newValue)
 
-        self._bubble_up_value()
+        return self._bubble_up_value()
 
     def remove(self) -> Any:
         """Removes a value from the heap, reorders the heap, and then returns the value"""
@@ -37,7 +37,7 @@ class MaxBinaryHeap:
         """Swaps two values from self.values in place"""
         self.values[index_one], self.values[index_two] = self.values[index_two], self.values[index_one]
 
-    def _get_child_indices(self, current_index: int) -> List[int, int]:
+    def _get_child_indices(self, current_index: int) -> List[int]:
         """Returns a parent node's two child indices"""
         base_multiplier = current_index * 2
         left_child = base_multiplier + 1
