@@ -64,14 +64,14 @@ class PriorityQueue:
             right_task = self.queue[right_child_index] if right_child_index <= last_index else None
             left_task = self.queue[left_child_index] if left_child_index <= last_index else None
 
-            if left_task and right_task and left_task.priority > current_value.priority and right_task.priority > current_value.priority:
-                largest_child_index = left_child_index if left_task.priority > right_task.priority else right_child_index
+            if left_task and right_task and left_task["priority"] > current_value["priority"] and right_task["priority"] > current_value["priority"]:
+                largest_child_index = left_child_index if left_task["priority"] > right_task["priority"] else right_child_index
                 self._swap_values(index, largest_child_index)
                 index = largest_child_index
-            elif left_task and left_task.priority > current_value.priority:
+            elif left_task and left_task["priority"] > current_value["priority"]:
                 self._swap_values(index, left_child_index)
                 index = left_child_index
-            elif right_task and right_task.priority > current_value.priority:
+            elif right_task and right_task["priority"] > current_value["priority"]:
                 self._swap_values(index, right_child_index)
                 index = right_child_index
             else:
@@ -88,7 +88,7 @@ class PriorityQueue:
         while True:
             parent_index = self._get_parent_index(index)
 
-            if self.queue[parent_index].priority < task.priority:
+            if self.queue[parent_index]["priority"] < task["priority"]:
                 self._swap_tasks(index, parent_index)
                 index = parent_index
             else:
@@ -110,7 +110,9 @@ class PriorityQueue:
         """
         Takes in a child index and finds its parent index
         """
-        return (child_index - 1) // 2
+        index = (child_index - 1) // 2
+
+        return index if index >= 0 else 0
 
     def _swap_tasks(self, index_one: int, index_two: int) -> None:
         """
