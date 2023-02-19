@@ -11,7 +11,7 @@ class TestMaxBinaryHeap(unittest.TestCase):
         self.assertEqual(mbh.values, [5])
         self.assertEqual(added_value_index, 0)
 
-    def test_inserts_values_in_correct_order_and_bubbles(self):
+    def test_inserts_values_in_correct_order_and_bubbles_right_side(self):
         mbh = MaxBinaryHeap()
         values = [41, 39, 33, 18, 27, 12]
 
@@ -23,6 +23,28 @@ class TestMaxBinaryHeap(unittest.TestCase):
         bubbled_up_value_index = mbh.insert(55)
         self.assertEqual(mbh.values, [55, 39, 41, 18, 27, 12, 33])
         self.assertEqual(mbh.values[bubbled_up_value_index], 55)
+
+    def test_inserts_values_in_correct_order_and_bubbles_left_side(self):
+        mbh = MaxBinaryHeap()
+        values = [55, 39, 41, 18, 27, 12, 33]
+
+        for index, value in enumerate(values):
+            added_value_index = mbh.insert(value)
+            self.assertEqual(mbh.values, values[:index + 1])
+            self.assertEqual(mbh.values[added_value_index], value)
+
+        bubbled_up_value_index = mbh.insert(24)
+        self.assertEqual(mbh.values, [55, 39, 41, 24, 27, 12, 33, 18])
+        self.assertEqual(mbh.values[bubbled_up_value_index], 24)
+
+    def test_removes_and_returns_first_value(self):
+        pass
+
+    def test_removes_and_bubbles_down_values_on_right_side(self):
+        pass
+
+    def test_removes_and_bubbles_down_values_on_left_side(self):
+        pass
 
 
 if __name__ == "__main__":
