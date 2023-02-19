@@ -4,15 +4,16 @@ Heaps are either a type of `tree` or an `array`/`list` data structure.
 
 ## TABLE OF CONTENTS
 
-- [Table of Contents](#table-of-contents)
-  - [Implementations](#implementations)
-  - [Type](#type)
-  - [Data Structure Description](#data-structure-description)
-  - [Space and Time Complexity](#space-and-time-complexity)
+-   [Table of Contents](#table-of-contents)
+    -   [Implementations](#implementations)
+    -   [Type](#type)
+    -   [Data Structure Description](#data-structure-description)
+    -   [Space and Time Complexity](#space-and-time-complexity)
 
 ## IMPLEMENTATION
 
-- [JavaScript](maxBinaryHeap.js)
+-   [JavaScript](maxBinaryHeap.js)
+-   [Python](max_binary_heap.py)
 
 ## TYPE
 
