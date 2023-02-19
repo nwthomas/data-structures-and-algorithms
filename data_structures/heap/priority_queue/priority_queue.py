@@ -66,13 +66,13 @@ class PriorityQueue:
 
             if left_task and right_task and left_task["priority"] > current_value["priority"] and right_task["priority"] > current_value["priority"]:
                 largest_child_index = left_child_index if left_task["priority"] > right_task["priority"] else right_child_index
-                self._swap_values(index, largest_child_index)
+                self._swap_tasks(index, largest_child_index)
                 index = largest_child_index
             elif left_task and left_task["priority"] > current_value["priority"]:
-                self._swap_values(index, left_child_index)
+                self._swap_tasks(index, left_child_index)
                 index = left_child_index
             elif right_task and right_task["priority"] > current_value["priority"]:
-                self._swap_values(index, right_child_index)
+                self._swap_tasks(index, right_child_index)
                 index = right_child_index
             else:
                 break

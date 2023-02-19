@@ -42,5 +42,30 @@ class TestPriorityQueue(unittest.TestCase):
             { "value": 12, "priority": 1 },
         ])
 
+    def test_dequeues_and_bubbles_down(self):
+        pq = self.create_priority_queue()
+        values = [
+            [41, pq.priority_low],
+            [39, pq.priority_high],
+            [33, pq.priority_medium],
+            [18, pq.priority_high],
+            [27, pq.priority_medium],
+            [12, pq.priority_medium],
+        ]
+
+        for v in values:
+            value, priority = v
+            pq.enqueue(value, priority)
+
+        dequeued_task = pq.dequeue()
+        self.assertEqual(dequeued_task, { "value": 39, "priority": 2 })
+        self.assertEqual(pq.queue, [
+            { "value": 18, "priority": 2 },
+            { "value": 12, "priority": 1 },
+            { "value": 33, "priority": 1 },
+            { "value": 41, "priority": 0 },
+            { "value": 27, "priority": 1 },
+        ])
+
 if __name__ == "__main__":
     unittest.main()
