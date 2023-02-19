@@ -55,13 +55,46 @@ class PriorityQueue:
         Bubbles down the first index position task to its final placement based
         around its priority queue level relative to its children
         """
-        pass
+        index = 0
+        last_index = len(self.queue) - 1
+
+        while True:
+            current_value = self.queue[index]
+            right_child_index, left_child_index = self._get_child_indices(index)
+            right_task = self.queue[right_child_index] if right_child_index <= last_index else None
+            left_task = self.queue[left_child_index] if left_child_index <= last_index else None
+
+            if left_task and right_task and left_task.priority > current_value.priority and right_task.priority > current_value.priority:
+                largest_child_index = left_child_index if left_task.priority > right_task.priority else right_child_index
+                self._swap_values(index, largest_child_index)
+                index = largest_child_index
+            elif left_task and left_task.priority > current_value.priority:
+                self._swap_values(index, left_child_index)
+                index = left_child_index
+            elif right_task and right_task.priority > current_value.priority:
+                self._swap_values(index, right_child_index)
+                index = right_child_index
+            else:
+                break
+
 
     def _bubble_up_task(self) -> int:
         """
         Bubbles up a task over lower priority messages in the priority queue
         """
-        pass
+        index = len(self.queue) - 1
+        task = self.queue[index]
+
+        while True:
+            parent_index = self._get_parent_index(index)
+
+            if self.queue[parent_index].priority < task.priority:
+                self._swap_tasks(index, parent_index)
+                index = parent_index
+            else:
+                break;
+    
+        return index
 
     def _get_child_indices(self, current_index: int) -> List[int]:
         """
