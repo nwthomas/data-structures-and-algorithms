@@ -47,7 +47,7 @@ class MaxBinaryHeap:
 
     def _get_parent_index(self, child_index: int) -> int:
         """Returns a given child node's parent index"""
-        parent_index = child_index - 1 // 2
+        parent_index = (child_index - 1) // 2
 
         return parent_index if parent_index >= 0 else 0
 
