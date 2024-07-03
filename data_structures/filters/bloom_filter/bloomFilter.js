@@ -1,7 +1,3 @@
-/*
-
-*/
-
 class BloomFilter {
     constructor(size = 100) {
         this.size = size;
@@ -13,6 +9,13 @@ class BloomFilter {
         ];
     }
 
+    /**
+     * A simple hashing function used to generate a value for the inputted string
+     *
+     * @param {string} str The string to hash based on the seed
+     * @param {number} seed The seed to be used for the hashing function
+     * @returns  {number} The hashed value for the string
+     */
     hash(str, seed) {
         let hash = 0;
         for (let i = 0; i < str.length; i++) {
@@ -22,16 +25,29 @@ class BloomFilter {
         return hash;
     }
 
-    add(item) {
+    /**
+     * Adds a value to the probabilistic bloom filter data structure
+     *
+     * @param {string} str The string to hash and add to the bloom filter
+     */
+    add(str) {
         this.hashFunctions.forEach((fn) => {
-            const index = fn(item);
+            const index = fn(str);
             this.bitArray[index] = 1;
         });
     }
 
-    contains(item) {
+    /**
+     * Checks if a string value exists in the bloom filter. This function returns a probabilistic
+     * 'yes' (maybe it exists) and a firm 'no' (it definitely does not).
+     *
+     * @param {string} str A string to check for existence in the bloom filter
+     * @returns {boolean} Returns a probabilistic 'yes' or a deterministic 'no' that the value is
+     * in the filter
+     */
+    contains(str) {
         return this.hashFunctions.every((fn) => {
-            const index = fn(item);
+            const index = fn(str);
             return this.bitArray[index] === 1;
         });
     }
