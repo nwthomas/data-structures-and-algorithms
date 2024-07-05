@@ -1,3 +1,16 @@
+/*
+
+A Bloom Filter is a space-efficient probabilistic data structure used to test whether an element
+is a member of a set.
+
+It uses multiple hash functions to set bits in a bit array, allowing quick membership checks.
+
+However, it may produce false positives (indicating an element is in the set when it's not) but
+never false negatives (indicating an element is not in the set when it is). This makes Bloom
+Filters useful for applications where space is limited and some uncertainty is acceptable.
+
+*/
+
 class BloomFilter {
     constructor(size = 100) {
         this.size = size;
