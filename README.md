@@ -26,6 +26,8 @@ This repository is a collection of data structures and algorithms implemented in
   - [Cache](data_structures/cache)
     - [Least Recently Used](data_structures/cache/least_recently_used)
     - [Ring Buffer](data_structures/cache/ring_buffer)
+  - [Filters](data_structures/filters)
+    - [Bloom Filter](data_structures/filters/bloom_filter)
   - [Graph](data_structures/graph) 🚧 Under Construction 🚧
   - [Hash Tables](hash_tables) 🚧 Under Construction 🚧
   - [Heap](data_structures/heap)

@@ -9,6 +9,8 @@ These data structures are key interview topic for a reason - They are used all o
 -   [Cache](cache)
     -   [Least Recently Used](cache/least_recently_used)
     -   [Ring Buffer](cache/ring_buffer)
+-   [Filters](filters)
+    -   [Bloom Filter](filters/bloom_filter)
 -   [Graph](graph) 🚧 Under Construction 🚧
 -   [Hash Tables](hash_tables) 🚧 Under Construction 🚧
 -   [Heap](heap)
