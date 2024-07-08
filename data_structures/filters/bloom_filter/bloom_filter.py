@@ -43,9 +43,9 @@ class BloomFilter:
         int: The hash value of the input string.
         """
         hash_value = 0
-        for i in enumerate(string):
-            hash_value = (hash * seed) + ord(string[i])
-            hash_value = hash % self.size
+        for i, _ in enumerate(string):
+            hash_value = (hash_value * seed) + ord(string[i])
+            hash_value = hash_value % self.size
 
         return hash_value
 
